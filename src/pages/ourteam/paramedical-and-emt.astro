@@ -1,0 +1,47 @@
+---
+import Layout from '@layouts/Layout.astro'
+import ParamedicalHero from '@components/ourteam/ParamedicalHero.astro'
+import OurTeam from '@components/about/OurTeam.astro'
+import Testimonials from '@components/shared/Testimonials.astro'
+import ParamedicalDescription from '@components/ourteam/ParamedicalDescription.astro'
+import Values from '@components/about/Values.astro'
+import Team from '@components/about/Team.astro'
+import CallToAction from '@components/shared/CallToAction.astro'
+import { SITE } from '@config'
+---
+
+<Layout
+  title={`Paramedical & EMT Medical Servicess - ${SITE.title}`}
+  description="We offer fully qualified, licensed and trained Paramedics and EMTs"
+>
+  <ParamedicalHero />
+
+  {/* Diagonal section separator */}
+  <div class="relative h-16 w-full md:h-32 lg:h-48">
+    <svg
+      class="absolute h-full w-full text-dark-800"
+      preserveAspectRatio="none"
+      viewBox="0 0 100 100"
+      fill="currentcolor"
+    >
+      <polygon points="0,0 0,100 100,100"></polygon>
+    </svg>
+  </div>
+
+  <ParamedicalDescription />
+
+  {/* Diagonal section separator */}
+  <div class="relative h-16 w-full bg-dark-800 md:h-32 lg:h-48">
+    <svg
+      class="absolute h-full w-full text-dark-900"
+      preserveAspectRatio="none"
+      viewBox="0 0 100 100"
+      fill="currentcolor"
+    >
+      <polygon points="0,100 100,100 100,0"></polygon>
+    </svg>
+  </div>
+
+  <OurTeam />
+  <CallToAction />
+</Layout>
