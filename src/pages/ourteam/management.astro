@@ -1,0 +1,47 @@
+---
+import Layout from '@layouts/Layout.astro'
+import ManagementHero from '@components/ourteam/ManagementHero.astro'
+import OurTeam from '@components/about/OurTeam.astro'
+import Testimonials from '@components/shared/Testimonials.astro'
+import ManagementDescription from '@components/ourteam/ManagementDescription.astro'
+import Values from '@components/about/Values.astro'
+import Team from '@components/about/Team.astro'
+import CallToAction from '@components/shared/CallToAction.astro'
+import { SITE } from '@config'
+---
+
+<Layout
+  title={`Management - ${SITE.title}`}
+  description="Our executive and managerial staff is an ensemble of professionals with background experience in law enforcement,"
+>
+  <ManagementHero />
+
+  {/* Diagonal section separator */}
+  <div class="relative h-16 w-full md:h-32 lg:h-48">
+    <svg
+      class="absolute h-full w-full text-dark-800"
+      preserveAspectRatio="none"
+      viewBox="0 0 100 100"
+      fill="currentcolor"
+    >
+      <polygon points="0,0 0,100 100,100"></polygon>
+    </svg>
+  </div>
+
+  <ManagementDescription />
+
+  {/* Diagonal section separator */}
+  <div class="relative h-16 w-full bg-dark-800 md:h-32 lg:h-48">
+    <svg
+      class="absolute h-full w-full text-dark-900"
+      preserveAspectRatio="none"
+      viewBox="0 0 100 100"
+      fill="currentcolor"
+    >
+      <polygon points="0,100 100,100 100,0"></polygon>
+    </svg>
+  </div>
+
+  
+  <CallToAction />
+</Layout>

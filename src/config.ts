@@ -11,12 +11,13 @@ export const SITE: Site = {
 
 export const CONTACT: Contact = {
   address: {
-    street: '3385 OVERLAND AVENUE, 1st. FLOOR',
-    city: 'Los Angeles',
+    street: '23223 Arlington Avenue',
+    city: 'Torrance',
     state: 'CA',
-    zip: '90034',
+    zip: '90501',
   },
-  phone: '+1-310-838-2329',
+  phone: '310.838.2329',
+  fax: '310.838.2985',
   email: 'contact@national50.com',
 }
 

@@ -44,7 +44,10 @@ const footerLinks = [
         {CONTACT.address.city}, {CONTACT.address.state}{' '}
         {CONTACT.address.zip}
       </p>
-      <p class="mt-6 text-lg text-dark-300">{CONTACT.phone}</p>
+      <p class="mt-6 text-lg text-dark-300">
+        Office: {CONTACT.phone}<br />
+        Fax: {CONTACT.fax}
+      </p>
       <p class="text-lg text-dark-300">{CONTACT.email}</p>
     </div>
     {/* Site links */}

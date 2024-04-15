@@ -18,6 +18,7 @@ export type Contact = {
     zip: string
   }
   phone: string
+  fax: string
   email: string
 }
 
