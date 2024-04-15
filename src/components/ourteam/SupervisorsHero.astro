@@ -1,0 +1,32 @@
+---
+import { Image } from 'astro:assets'
+import teamImage from '@images/stock/team/supervisors.jpg'
+---
+
+<section class="px-4 pb-10 pt-12 sm:px-6 md:pb-12 md:pt-16 lg:px-8">
+  <div class="mx-auto max-w-screen-xl">
+    {/* Hero text */}
+    <div class="mx-auto w-full max-w-4xl text-center lg:max-w-5xl">
+      <p
+        class="inline-flex items-center justify-center rounded-r-full rounded-tl-full bg-gradient-to-r from-dark-600 to-dark-700 px-6 py-2 text-sm font-medium tracking-wide text-white"
+      >
+        Field Supervisors 
+      </p>
+      <h1
+        class="mt-4 text-4xl font-extrabold text-white sm:text-5xl md:mt-5 md:text-6xl"
+      >
+      The back bone of our company is our supervisory staff.
+      </h1>
+      <p
+        class="mx-auto mt-4 max-w-lg text-xl text-dark-300 md:mt-5 md:max-w-3xl"
+      >
+      
+      Our reputation is built on the fact that we provide our clients with field supervisors at no cost to them.
+      </p>
+    </div>
+    {/* Hero image */}
+    <div class="mx-auto mt-12 max-w-screen-lg rounded-3xl shadow-xl">
+      <Image class="rounded-3xl" src={teamImage} alt="Agency team" />
+    </div>
+  </div>
+</section>
