@@ -1,0 +1,44 @@
+name: Command and Control, Dispatch, Communication and Monitoring 
+shortDescription: This office provides dedicated and trained professional security personal in all areas under the above heading.
+category: Services
+image:
+  src: '@images/stock/services/command.jpg'
+  alt: 'abstract art of a hand on a pink background'
+featured: true
+date: April. 2024
+stack:
+  - security
+hero:
+  tagline: Command and Control, Dispatch, Communication and Monitoring 
+  headline: This office provides dedicated and trained professional security personal in all areas under the above heading.
+  
+about:
+  tagline: About the service
+  text: 'This office provides dedicated and trained professional security personal in all areas under the above heading. Our personal are experienced officers that can operate, control, monitor and perform functions from simple monitoring to responding to complete command and control centers, which can dispatch, monitor, record and store data and control from a single central location. Officers are training in a variety of monitoring and recording equipment, as well as communications equipment, devices and procedures. Officers are trained and schooled in crises situations, including such as emergencies as fire and or earthquake evacuations. Procedures and protocols, range from local security command and control to notifications and assistance to police, fire, medical and first responders. '
+  text2: 'Whether it is a dispatch center, camera monitoring assignment or the solitary security officer on a post, they all have one thing in common, 24 - 7 - 365 communication. Every employee has the availability of communication at anytime that they are on duty, via radio or cellular phone. Their supervisors, and in some cases, their clients, are available at all times if so needed or notifications need to be made. In turn supervisors are able to contact management if needed anytime. Clients may contact the security officer, the supervisor or management at anytime.'
+  text3: 'Needless to say, communications are critical in the security business. Communications in written form , i. e; DAR’s and Reports are submitted daily. Whatever your needs are, National 50 Security and Investigations Inc. will work with you to provide a security plan to fit your individual security needs. '
+statsSection:
+  tagline: ''
+  headline: ''
+  text: ''
+  action:
+    href: '#'
+    label: ''
+  stats:
+    - label: ''
+      value: ''
+    - label: ''
+      value: ''
+    - label: ''
+      value: ''
+featuresSection:
+  tagline: ''
+  headline: ''
+  text: ''
+  features:
+    - tagline: ''
+      headline: ''
+      text: ''
+      image:
+        src: '@images/stock/services/security-solutions.jpg'
+        alt: 'Art piece'

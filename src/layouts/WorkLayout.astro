@@ -1,0 +1,62 @@
+---
+import Layout from './Layout.astro'
+import FeaturedWork from '@components/work/FeaturedWork.astro'
+import ArchivedCaseStudies from '@components/work/ArchivedCaseStudies.astro'
+import CallToAction from '@components/shared/CallToAction.astro'
+import { getCollection } from 'astro:content'
+import { getCaseStudyCategories } from '@utils/caseStudies'
+import { SITE } from '@config'
+import type { CaseStudy } from '@types'
+
+interface Props {
+  caseStudies?: CaseStudy[]
+  currentCategory?: string
+  categories?: { name: string; slug: string }[]
+  title?: string
+  description?: string
+}
+
+const {
+  caseStudies = await getCollection('caseStudies'),
+  currentCategory = 'all',
+  categories = await getCaseStudyCategories(),
+  title = `Our work | ${SITE.title}`,
+  description = 'Crator has worked with a large array of clients in various industries: Consumer goods, fashion, b2b, entertainment, etc.',
+} = Astro.props
+---
+
+<Layout title={title} description={description}>
+  <section class="px-4 py-12 sm:px-6 md:py-16 lg:px-8">
+    <div class="mx-auto max-w-screen-xl">
+      {/* Hero header */}
+      <div class="mx-auto w-full max-w-3xl text-center lg:max-w-5xl">
+        <p
+          class="inline-flex items-center justify-center rounded-r-full rounded-tl-full bg-gradient-to-r from-dark-600 to-dark-700 px-6 py-2 text-sm font-medium tracking-wide text-white"
+        >
+          Our work
+        </p>
+        <h1
+          class="mt-4 text-4xl font-extrabold text-white sm:text-5xl md:mt-5 md:text-6xl"
+        >
+          Check out some of our recent work
+        </h1>
+        <p
+          class="mx-auto mt-4 max-w-lg text-xl text-dark-300 md:mt-5 md:max-w-3xl"
+        >
+          Sed porttitor lectus nibh. Pellentesque in ipsum id orci porta
+          dapibus. Curabitur non nulla sit amet nisl tempus convallis quis ac
+          lectus.
+        </p>
+      </div>
+
+      {/* Featured work */}
+      <FeaturedWork />
+    </div>
+  </section>
+  <ArchivedCaseStudies
+    caseStudies={caseStudies}
+    categories={categories}
+    currentCategory={currentCategory}
+  />
+  <CallToAction />
+</Layout>

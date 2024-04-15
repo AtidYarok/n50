@@ -1,0 +1,48 @@
+---
+import Layout from '@layouts/Layout.astro'
+import AboutHero from '@components/about/AboutHero.astro'
+import OurTeam from '@components/about/OurTeam.astro'
+import Testimonials from '@components/shared/Testimonials.astro'
+import FeaturesAlternatingWithIcons from '@components/about/FeaturesAlternatingWithIcons.astro'
+import Values from '@components/about/Values.astro'
+import Team from '@components/about/Team.astro'
+import CallToAction from '@components/shared/CallToAction.astro'
+import { SITE } from '@config'
+---
+
+<Layout
+  title={`About us - ${SITE.title}`}
+  description="Protecting Clients, Securing Communities, Building Partnerships"
+>
+  <AboutHero />
+
+  {/* Diagonal section separator */}
+  <div class="relative h-16 w-full md:h-32 lg:h-48">
+    <svg
+      class="absolute h-full w-full text-dark-800"
+      preserveAspectRatio="none"
+      viewBox="0 0 100 100"
+      fill="currentcolor"
+    >
+      <polygon points="0,0 0,100 100,100"></polygon>
+    </svg>
+  </div>
+
+  <FeaturesAlternatingWithIcons />
+
+  {/* Diagonal section separator */}
+  <div class="relative h-16 w-full bg-dark-800 md:h-32 lg:h-48">
+    <svg
+      class="absolute h-full w-full text-dark-900"
+      preserveAspectRatio="none"
+      viewBox="0 0 100 100"
+      fill="currentcolor"
+    >
+      <polygon points="0,100 100,100 100,0"></polygon>
+    </svg>
+  </div>
+
+  <Values />
+  <OurTeam />
+  <CallToAction />
+</Layout>

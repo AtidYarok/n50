@@ -1,0 +1,62 @@
+---
+import { Icon } from 'astro-icon'
+
+const steps = [
+  {
+    label: 'Partnerships with our customers',
+    description:
+      'whose loyalty has brought longevity and success.',
+    icon: 'clipboard-list',
+  },
+  {
+    label: 'Partnerships with our employees',
+    description:
+      'whose dedication has built the company. ',
+    icon: 'artboard',
+  },
+  {
+    label: 'Belief in secure communities ',
+    description:
+      'Upholding Safety, Trust, and Prosperity',
+    icon: 'rocket',
+  },
+]
+---
+
+<div class="mx-auto w-full max-w-screen-xl px-4 sm:px-6 lg:px-8">
+  {/* Section text */}
+  <div class="mx-auto w-full max-w-xl text-center md:max-w-2xl lg:max-w-3xl">
+    <p
+      class="inline-flex items-center justify-center rounded-r-full rounded-tl-full bg-gradient-to-r from-dark-600 to-dark-700 px-6 py-2 text-sm font-medium tracking-wide text-white"
+    >
+      Our process
+    </p>
+    <h2 class="mt-6 text-3xl font-extrabold text-white sm:text-4xl md:text-5xl">
+      We are a dominant provider of a wide array of security and safety services in each of the markets in which we compete.
+    </h2>
+    <p class="mt-6 text-xl text-dark-300">
+      We pledge to do our very best to build and strengthen the partnerships which our business is based:
+    </p>
+  </div>
+
+  {/* Process steps */}
+  <div
+    class="mx-auto mt-12 grid max-w-xl gap-10 lg:mt-16 lg:max-w-none lg:grid-cols-3 lg:gap-x-12"
+  >
+    {
+      steps.slice(0, 3).map((step) => (
+        <div class="w-full">
+          <span class="mx-auto flex h-18 w-18 items-center justify-center rounded-3xl bg-gradient-to-r from-dark-600 to-dark-700 shadow-xl">
+            <Icon name={step.icon} class="h-10 w-10 text-dark-300" />
+          </span>
+          <h3 class="mt-5 text-center text-2xl font-semibold text-white">
+            {step.label}
+          </h3>
+          <p class="mt-2 text-center text-lg leading-relaxed text-dark-300">
+            {step.description}
+          </p>
+        </div>
+      ))
+    }
+  </div>
+</div>

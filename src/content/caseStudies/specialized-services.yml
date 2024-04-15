@@ -1,0 +1,44 @@
+name: Specialized Services
+shortDescription: Along with the listed array of security services, National 50 Security and Investigation, Inc. can provide, private investigation services that include civil process service, as well as criminal investigations, mobile and stationary surveillance capabilities and home and business protection with armed or unarmed personnel 
+category: Services
+image:
+  src: '@images/stock/services/specialized-services.jpg'
+  alt: 'abstract art of a hand on a pink background'
+featured: true
+date: April. 2024
+stack:
+  - security
+hero:
+  tagline: Specialized Services
+  headline: Comprehensive Security Solutions and Investigative Services for Your Peace of Mind
+  
+about:
+  tagline: About the service
+  text: 'Along with the listed array of security services, National 50 Security and Investigation, Inc. can provide, private investigation services that include civil process service, as well as criminal investigations, mobile and stationary surveillance capabilities and home and business protection with armed or unarmed personnel '
+  text2: 'National 50 Security and Investigations, Inc. can also provide medically trained personnel i.e.: Licensed paramedic Security Officers, CPR and Basic 1st First AID trained Officers'
+  text3: ''
+statsSection:
+  tagline: ''
+  headline: ''
+  text: ''
+  action:
+    href: '#'
+    label: ''
+  stats:
+    - label: ''
+      value: ''
+    - label: ''
+      value: ''
+    - label: ''
+      value: ''
+featuresSection:
+  tagline: ''
+  headline: ''
+  text: ''
+  features:
+    - tagline: ''
+      headline: ''
+      text: ''
+      image:
+        src: '@images/stock/services/security-solutions.jpg'
+        alt: ''

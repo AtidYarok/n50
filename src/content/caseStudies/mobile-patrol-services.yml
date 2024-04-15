@@ -1,0 +1,44 @@
+name: Mobile Patrol Services
+shortDescription: Consists of private vehicle patrol, bicycles or golf Carts that never leave your property, except for fuel and maintenance and will not be used at any other location. 
+category: Services
+image:
+  src: '@images/stock/services/mobile-patrol.jpg'
+  alt: 'abstract art of a hand on a pink background'
+featured: true
+date: April. 2024
+stack:
+  - security
+hero:
+  tagline: Mobile Patrol Services
+  headline: Consists of private vehicle patrol, bicycles or golf Carts
+  
+about:
+  tagline: About the service
+  text: 'Consists of private vehicle patrol, bicycles or golf Carts that never leave your property, except for fuel and maintenance and will not be used at any other location. These units are a great way to cover grounds and insure last responses. Usually, the services run on a 24 hours per day/7 days per week schedule or schedule depending upon the clients’ needs. Mobile patrols units will be readily identifiable and may be equipped with light bars, spotlights, microphones, speakers and cell phones or radios. '
+  text2: 'National 50 Security and Investigations, Inc. will provide supervision of security officers at no additional cost to you. We shall designate supervisory personnel that will always be identified to each client and available to the client while security services are provided . Security personnel are available for the reporting to and conferring with the clients or their representatives with respect to the services being rendered. Our clients are able to contact the supervisory personnel at any time, 24 hours a day.'
+  text3: ''
+statsSection:
+  tagline: ''
+  headline: ''
+  text: ''
+  action:
+    href: '#'
+    label: ''
+  stats:
+    - label: ''
+      value: ''
+    - label: ''
+      value: ''
+    - label: ''
+      value: ''
+featuresSection:
+  tagline: ''
+  headline: ''
+  text: ''
+  features:
+    - tagline: ''
+      headline: ''
+      text: ''
+      image:
+        src: '@images/stock/services/security-solutions.jpg'
+        alt: 'Art piece'

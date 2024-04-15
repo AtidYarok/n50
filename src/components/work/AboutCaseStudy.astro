@@ -1,0 +1,47 @@
+---
+import type { CaseStudy } from '@types'
+
+interface Props {
+  caseStudy: CaseStudy
+}
+
+const {
+  caseStudy: {
+    data: { about: data },
+  },
+} = Astro.props
+---
+
+<section class="px-4 py-12 sm:px-6 md:py-16 lg:px-8">
+  <div class="mx-auto max-w-screen-md text-center lg:max-w-screen-xl">
+    <p
+      class="inline-flex items-center justify-center rounded-r-full rounded-tl-full bg-gradient-to-r from-dark-600 to-dark-700 px-6 py-2 text-sm font-medium tracking-wide text-white"
+    >
+      {data.tagline}
+    </p>
+    {/* Project description */}
+    <div class="mx-auto mt-6 flex w-full flex-wrap text-center">
+      <div class="mx-auto w-full lg:w-4/5">
+        <p
+          class="text-2xl mb-6 font-medium tracking-tight text-white sm:text-3xl lg:text-3xl lg:leading-tight"
+        >
+          {data.text}
+        </p>
+        {data.text2 && (
+          <p
+            class="text-2xl mb-6 font-medium tracking-tight text-white sm:text-3xl lg:text-3xl lg:leading-tight"
+          >
+            {data.text2}
+          </p>
+        )}
+        {data.text3 && (
+          <p
+            class="text-2xl mb-6 font-medium tracking-tight text-white sm:text-3xl lg:text-3xl lg:leading-tight"
+          >
+            {data.text3}
+          </p>
+        )}
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,28 @@
+---
+import { twMerge } from 'tailwind-merge'
+import { Icon } from 'astro-icon'
+import type { HTMLAttributes } from 'astro/types'
+
+interface CustomProps {
+  name: string
+  size?: 'md' | 'lg'
+}
+
+type Props = CustomProps & HTMLAttributes<'a'>
+
+const { name, size = 'lg', href, class: className, ...attrs } = Astro.props
+
+const conatinerClassName = twMerge(
+  'flex items-center justify-center transition duration-300 ease-in-out rounded-full bg-dark-700 hover:bg-white text-dark-300 group',
+  size === 'lg' ? 'w-12 h-12' : 'w-10 h-10',
+  className,
+)
+const iconClassName = twMerge(
+  'transition duration-300 ease-in-out group-hover:text-dark-900',
+  size === 'lg' ? 'w-6 h-6' : 'w-5 h-5',
+)
+---
+
+<a class={conatinerClassName} href={href} {...attrs}>
+  <Icon name={name} class={iconClassName} />
+</a>

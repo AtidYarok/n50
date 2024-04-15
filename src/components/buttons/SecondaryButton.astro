@@ -1,0 +1,51 @@
+---
+import { twMerge } from 'tailwind-merge'
+import type { HTMLAttributes } from 'astro/types'
+
+interface CustomProps {
+  href?: string
+  size?: 'sm' | 'lg'
+  gradient?: string
+}
+
+type Props = CustomProps & HTMLAttributes<'a'> & HTMLAttributes<'button'>
+
+const {
+  href,
+  class: className,
+  size = 'lg',
+  gradient = 'from-dark-800 to-dark-900',
+  ...attrs
+} = Astro.props
+
+const containerStyles =
+  'flex relative justify-center items-center px-8 w-auto text-base font-medium leading-snug text-white group'
+const circleStyles =
+  'absolute top-0 left-0 z-10 block w-full h-full transition-all ease-in-out rounded-full bg-gradient-to-r duration-250 md:w-14 md:group-hover:w-full'
+
+const sizeStyles = {
+  sm: 'h-12 md:h-14',
+  lg: 'h-14',
+}
+
+const containerClasses = twMerge(containerStyles, sizeStyles[size], className)
+const circleClasses = twMerge(circleStyles, gradient)
+---
+
+{
+  href ? (
+    <a href={href} class={containerClasses} {...attrs}>
+      <span class={circleClasses} />
+      <span class="relative z-20">
+        <slot />
+      </span>
+    </a>
+  ) : (
+    <button class={containerClasses} {...attrs}>
+      <span class={circleClasses} />
+      <span class="relative z-20">
+        <slot />
+      </span>
+    </button>
+  )
+}

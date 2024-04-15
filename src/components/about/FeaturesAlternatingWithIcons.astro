@@ -1,0 +1,80 @@
+---
+import { Image } from 'astro:assets'
+import { Icon } from 'astro-icon'
+
+import valuesImage from '@images/stock/trust.jpg'
+import handbookImage from '@images/stock/handbook.jpg'
+
+const features = [
+  {
+    tagline: 'Our mission',
+    headline: 'Securing Trust, Safeguarding Communities',
+    text: 'Our mission is to be a reliable, dependable full-service security organization whose top priority is the total satisfaction of our clients. Our wish and what we strive for, is to be recognized as a professional, superior performing company whose clients and property are protected.',
+    image: {
+      src: valuesImage,
+      alt: 'Woman point at computer screen',
+    },
+    items: [
+      {
+        label: '',
+        text: '',
+        icon: '',
+      },
+    ],
+  },
+]
+---
+
+<section class="bg-dark-800 px-4 pb-10 sm:px-6 md:pb-16 md:pt-12 lg:px-8">
+  {/* Features container */}
+  <div class="mx-auto w-full max-w-screen-xl">
+    {
+      features.map((feature, i) => (
+        <div
+          class:list={[
+            'mx-auto max-w-xl md:max-w-2xl lg:mx-0 lg:grid lg:max-w-none lg:grid-cols-3 lg:gap-x-16 xl:gap-x-20 2xl:gap-x-24',
+            { 'mt-24 lg:mt-32': i % 2 === 1 },
+          ]}
+        >
+          {/* Feature text with icons */}
+          <div class:list={[{ 'lg:order-2': i % 2 === 1 }, 'col-span-2']}>
+            <div class="text-center lg:text-left">
+              <p class="inline-flex items-center justify-center rounded-r-full rounded-tl-full bg-gradient-to-r from-dark-600 to-dark-700 px-6 py-2 text-sm font-medium tracking-wide text-white">
+                {feature.tagline}
+              </p>
+              <h2 class="mt-4 text-3xl font-extrabold text-white sm:text-4xl md:text-5xl lg:mt-6">
+                {feature.headline}
+              </h2>
+              <p class="mt-4 text-xl text-dark-300 lg:mt-6">{feature.text}</p>
+              <div class="mx-auto mt-8 flex max-w-xs flex-col space-y-8 sm:mx-0 sm:mt-10 sm:max-w-none sm:flex-row sm:space-x-4 sm:space-y-0 lg:space-x-6">
+                {feature.items.slice(0, 3).map((item) => (
+                  <div class="flex flex-col items-center lg:items-start">
+                    <div class="flex flex-col items-center sm:flex-row">
+                      
+                      <div class="mt-3 text-xl font-semibold text-white sm:mt-0">
+                        {item.label}
+                      </div>
+                    </div>
+                    <p class="mt-1 text-lg leading-relaxed text-dark-300 sm:mt-3">
+                      {item.text}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+          {/* Feature image */}
+          <div class="col-span-1 mt-10 flex items-center lg:order-1 lg:mt-0">
+            <div class="aspect-h-3 aspect-w-2 relative w-full rounded-3xl text-center shadow-xl">
+              <Image
+                class="absolute inset-0 h-full w-full rounded-3xl object-cover object-center align-middle"
+                src={feature.image.src}
+                alt={feature.image.alt}
+              />
+            </div>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</section>

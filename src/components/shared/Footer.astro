@@ -1,0 +1,83 @@
+---
+import SocialButton from '@components/buttons/SocialButton.astro'
+import { CONTACT, SOCIALS } from '@config'
+import { Image } from 'astro:assets'
+
+import logo from '@images/logo.svg'
+
+const footerLinks = [
+  { label: 'Home', href: '/' },
+  { label: 'Services', href: '/services' },
+  { label: 'About', href: '/about' },
+  { label: 'Contact us', href: '/contact' },
+]
+---
+
+<footer class="bg-dark-900 px-4 py-12 sm:px-6 md:py-16 lg:px-8">
+  <div
+    class="mx-auto grid gap-8 sm:max-w-3xl md:grid-cols-3 md:gap-y-12 lg:max-w-screen-xl lg:grid-cols-4"
+  >
+    {/* Logo and copyright text */}
+    <div class="flex flex-col lg:mx-auto">
+      <div class="flex items-center">
+        <a href="/" class="group text-2xl font-black lg:block">
+        <div class="group flex h-36 w-full items-center justify-center rounded-3xl">
+          <Image
+          src={logo}
+          alt="National 50"
+          class="z-30 h-full w-auto "
+        />
+        </div>
+        </a>
+      </div>
+      <div class="mt-6 text-lg text-dark-300 md:mt-8">
+        © {new Date().getFullYear()} National 50
+        <br /> All rights reserved.
+      </div>
+    </div>
+    {/* Contact information */}
+    <div class="lg:mx-auto">
+      <h6 class="text-xl font-semibold text-white">Get in touch</h6>
+      <p class="mt-2 text-lg text-dark-300">
+        {CONTACT.address.street}
+        <br />
+        {CONTACT.address.city}, {CONTACT.address.state}{' '}
+        {CONTACT.address.zip}
+      </p>
+      <p class="mt-6 text-lg text-dark-300">{CONTACT.phone}</p>
+      <p class="text-lg text-dark-300">{CONTACT.email}</p>
+    </div>
+    {/* Site links */}
+    <div class="lg:mx-auto">
+      <h6 class="text-xl font-semibold text-white">Site Map</h6>
+      <ul class="mt-2 space-y-1 text-lg">
+        {
+          footerLinks.map((link) => (
+            <li class="font-medium text-dark-300 hover:text-white">
+              <a href={link.href}>{link.label}</a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+    {/* Social links */}
+    <div class="sm:col-span-3 lg:col-span-1 lg:mx-auto">
+      <h6 class="text-xl font-semibold text-white">
+        Follow us on social media
+      </h6>
+      <p class="mt-2 text-lg text-dark-300">
+        Stay connected and updated on our latest projects.
+      </p>
+      <div class="mt-4 w-full lg:mt-6">
+        {/* Social links container */}
+        <div class="flex justify-start space-x-4">
+          {
+            SOCIALS.map((socialLink) => (
+              <SocialButton href={socialLink.href} name={socialLink.name} />
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

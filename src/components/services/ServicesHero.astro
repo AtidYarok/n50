@@ -1,0 +1,59 @@
+---
+import { Image } from 'astro:assets'
+import PrimaryButton from '@components/buttons/PrimaryButton.astro'
+
+import image1 from '@images/stock/hero-services-01.jpg'
+import image2 from '@images/stock/hero-services-02.jpg'
+---
+
+<section
+  class="bg-dark-900 px-4 pb-10 pt-12 sm:px-6 md:pb-20 md:pt-16 lg:px-8 lg:pb-64"
+>
+  <div class="mx-auto max-w-screen-xl">
+    {/* Hero header */}
+    <div>
+      <p
+        class="inline-flex items-center justify-center rounded-r-full rounded-tl-full bg-gradient-to-r from-dark-600 to-dark-700 px-6 py-2 text-sm font-medium tracking-wide text-white"
+      >
+        Our services
+      </p>
+      <h1
+        class="mt-6 text-left text-4xl font-extrabold text-white sm:text-5xl md:text-6xl"
+      >
+      Comprehensive Security Solutions Tailored to Your Needs
+      </h1>
+    </div>
+    {/* Hero content */}
+    <div class="relative mt-6 md:mt-8 lg:mt-12 xl:mt-16">
+      <div class="z-10 grid gap-x-8 lg:absolute lg:grid-cols-2">
+        <div>
+          <p class="max-w-lg text-xl text-dark-300 sm:max-w-3xl lg:mx-auto">
+            Discover a diverse range of security services meticulously designed to meet your unique requirements. 
+            From fully uniformed officers to specialized investigative teams, we offer professional solutions backed by expertise and dedication. 
+            Explore our customizable options and experience top-notch security with National 50 Security and Investigations Inc.
+          </p>
+          <div class="mt-8 sm:flex sm:justify-start">
+            <PrimaryButton class="h-14 hover:bg-dark-700" href="/contact">
+              Let's get started
+            </PrimaryButton>
+          </div>
+        </div>
+        {/* Hero images */}
+        <div
+          class="mx-auto mt-10 grid sm:mx-0 sm:grid-cols-2 sm:gap-x-4 md:mt-12 lg:mt-0"
+        >
+          <Image
+            src={image1}
+            alt="Service 01"
+            class="w-full rounded-3xl object-cover object-center shadow-xl lg:h-96"
+          />
+          <Image
+            src={image2}
+            alt="Service 02"
+            class="mt-6 hidden w-full rounded-3xl object-cover object-center shadow-xl sm:mt-0 sm:block lg:h-96"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

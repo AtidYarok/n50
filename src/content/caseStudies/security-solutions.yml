@@ -1,0 +1,51 @@
+name: Security Solutions
+shortDescription: The reason that National 50 Security’s solution is successful and not just the run of the mill security company, is that we monitor our actions with supervision (at no additional cost to the client), and routinely follow up to ascertain if in fact, the threat has been eliminated or if it continues to be viable.
+category: Services
+image:
+  src: '@images/stock/services/security-solutions.jpg'
+  alt: 'abstract art of a hand on a pink background'
+featured: true
+date: April. 2024
+stack:
+  - security
+hero:
+  tagline: Security Solutions
+  headline: National 50 Security and Investigations Inc.’ solutions to security needs are fundamental. 
+  keyPoints:
+    - label: Is there a need for security?
+      text: “Threat Assessment”
+      icon: puzzle
+    - label: Is the need credible?
+      text: “Threat Analysis”
+      icon: stack
+    - label: The solution is to apply the applicable security system
+      text: “Threat Prevention”
+      icon: bulb
+about:
+  tagline: About the service
+  text: The reason that National 50 Security’s solution is successful and not just the run of the mill security company, is that we monitor our actions with supervision (at no additional cost to the client), and routinely follow up to ascertain if in fact, the threat has been eliminated or if it continues to be viable.
+statsSection:
+  tagline: ''
+  headline: ''
+  text: ''
+  action:
+    href: '#'
+    label: ''
+  stats:
+    - label: ''
+      value: ''
+    - label: ''
+      value: ''
+    - label: ''
+      value: ''
+featuresSection:
+  tagline: ''
+  headline: ''
+  text: ''
+  features:
+    - tagline: ''
+      headline: ''
+      text: ''
+      image:
+        src: '@images/stock/services/security-solutions.jpg'
+        alt: ''

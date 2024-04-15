@@ -1,0 +1,82 @@
+name: Locations and businesses serviced
+shortDescription: Discover the versatility of our services tailored to various industries and locations. From bustling office buildings to dynamic production sets, we cater to a wide range of businesses and events across different sectors.
+category: Services
+image:
+  src: '@images/stock/services/locations.jpg'
+  alt: 'abstract art of a hand on a pink background'
+featured: true
+date: April. 2024
+stack:
+  - security
+hero:
+  tagline: Locations and businesses serviced
+  headline: Discover the versatility of our services tailored to various industries and locations.
+  keyPoints:
+    - label: Apartment Complexes
+      text: ''
+      icon: puzzle
+    - label: Construction Sites
+      text: ''
+      icon: stack
+    - label: Office Buildings 
+      text: ''
+      icon: bulb
+  keyPoints2:
+    - label: Production & Broadcasting Locations 
+      text: ''
+      icon: puzzle
+    - label: Hotels
+      text: ''
+      icon: stack
+    - label: Retail Outlets 
+      text: ''
+      icon: bulb
+  keyPoints3:
+    - label: Shopping centers 
+      text: ''
+      icon: puzzle
+    - label: Restaurants 
+      text: ''
+      icon: stack
+    - label: Commercial and Factory Sites 
+      text: ''
+      icon: bulb
+  keyPoints4:
+    - label: Special Events 
+      text: ''
+      icon: puzzle
+    - label: State of California Authorized Security Company
+      text: ''
+      icon: 'puzzle'
+      
+  
+about:
+  tagline: About the service
+  text: 'Discover the versatility of our services tailored to various industries and locations. From bustling o fice buildings to dynamic production sets, we cater to a wide range of businesses and events across different sectors.'
+  text2: ''
+  text3: ''
+statsSection:
+  tagline: ''
+  headline: ''
+  text: ''
+  action:
+    href: '#'
+    label: ''
+  stats:
+    - label: ''
+      value: ''
+    - label: ''
+      value: ''
+    - label: ''
+      value: ''
+featuresSection:
+  tagline: ''
+  headline: ''
+  text: ''
+  features:
+    - tagline: ''
+      headline: ''
+      text: ''
+      image:
+        src: '@images/stock/services/security-solutions.jpg'
+        alt: 'Art piece'

@@ -1,0 +1,44 @@
+---
+import WorkLayout from '@layouts/WorkLayout.astro'
+import { getCollection } from 'astro:content'
+import { getCaseStudyCategories } from '@utils/caseStudies'
+import { SITE } from '@config'
+import type { CaseStudy } from '@types'
+
+export async function getStaticPaths() {
+  const categories = await getCaseStudyCategories()
+
+  const promises = categories.map(async (category) => {
+    const filteredcaseStudies = await getCollection(
+      'caseStudies',
+      ({ data }) => data.category === category.name,
+    )
+
+    return {
+      params: { category: category.slug },
+      props: {
+        caseStudies: filteredcaseStudies,
+        currentCategory: category.name,
+        categories,
+      },
+    }
+  })
+
+  return await Promise.all(promises)
+}
+
+interface Props {
+  caseStudies: CaseStudy[]
+  currentCategory: string
+  categories: { name: string; slug: string }[]
+}
+
+const { currentCategory, caseStudies, categories } = Astro.props
+---
+
+<WorkLayout
+  title={`Our work - ${currentCategory} - ${SITE.title}`}
+  caseStudies={caseStudies}
+  currentCategory={currentCategory}
+  categories={categories}
+/>

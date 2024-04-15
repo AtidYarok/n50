@@ -1,0 +1,160 @@
+---
+import { Image } from 'astro:assets'
+import { Icon } from 'astro-icon'
+import SecondaryButton from '@components/buttons/SecondaryButton.astro'
+import type { CaseStudy } from '@types'
+
+interface Props {
+  caseStudies: CaseStudy[]
+  currentCategory: string
+  categories: { name: string; slug: string }[]
+}
+
+const { caseStudies, currentCategory, categories } = Astro.props
+---
+
+<section id="archive" class="px-4 py-12 sm:px-6 md:py-16 lg:px-8">
+  {/* Section text */}
+  <div
+    class="mx-auto max-w-xl text-center md:max-w-2xl lg:max-w-screen-xl lg:text-left"
+  >
+    <p
+      class="inline-flex items-center justify-center rounded-r-full rounded-tl-full bg-gradient-to-r from-dark-600 to-dark-700 px-6 py-2 text-sm font-medium tracking-wide text-white"
+    >
+      Explore
+    </p>
+    <div class="mt-6 grid w-full gap-6 lg:grid-cols-5">
+      <div class="lg:col-span-3">
+        <h2
+          class="text-3xl font-extrabold leading-tight text-white sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight"
+        >
+          Filter through hundreds of our projects by industry
+        </h2>
+      </div>
+      <div class="lg:col-span-2">
+        <p class="text-xl text-dark-300">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, do eius mod
+          tempor incididunt ut labore et.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  {/* Projects section */}
+  <div class="mx-auto mt-10 max-w-screen-xl md:mt-12 lg:mt-16">
+    <div class="grid md:grid-cols-12 md:gap-8 lg:gap-12 xl:gap-16">
+      {/* Projects container */}
+      <div
+        class="order-2 mt-12 overflow-hidden md:order-1 md:col-span-9 md:mt-0"
+      >
+        {/* Projects container */}
+        <div class="grid gap-6 md:gap-8 lg:grid-cols-2">
+          {
+            caseStudies.map((caseStudy) => (
+              <div class="mx-auto max-w-lg rounded-3xl bg-dark-700 shadow-xl">
+                <a href={`/work/${caseStudy.id}`}>
+                  <div
+                    class="relative h-64 w-full rounded-t-3xl bg-cover bg-center"
+                    transition:name={
+                      caseStudy.data.featured
+                        ? `${caseStudy.id}-featured`
+                        : caseStudy.id
+                    }
+                  >
+                    <Image
+                      src={caseStudy.data.image.src}
+                      alt={caseStudy.data.image.alt}
+                      class="absolute inset-0 h-full w-full rounded-t-3xl object-cover object-center"
+                    />
+                    <p class="relative ml-6 mt-4 inline-flex items-center justify-center rounded-r-full rounded-tl-full bg-gradient-to-r from-dark-700 to-dark-800 px-6 py-2 text-xs font-medium tracking-wide text-white lg:ml-4 xl:ml-6">
+                      {caseStudy.data.category}
+                    </p>
+                  </div>
+                </a>
+
+                <div class="w-full p-6 lg:p-4 xl:p-6">
+                  <div class="flex w-full flex-wrap">
+                    <div class="flex w-1/2 items-center justify-start">
+                      <Icon name="calendar" class="h-5 w-5 text-dark-400" />
+
+                      <div class="ml-2 text-base font-medium leading-6 text-dark-400">
+                        {caseStudy.data.date}
+                      </div>
+                    </div>
+                    <div class="flex w-1/2 justify-end space-x-1">
+                      {caseStudy.data.stack.map((tech) => (
+                        <Icon name={tech} class="h-6 w-6 text-dark-400" />
+                      ))}
+                    </div>
+                  </div>
+                  <a href={`/work/${caseStudy.id}`}>
+                    <h3 class="mt-6 text-xl font-semibold leading-6 text-white md:text-2xl">
+                      {caseStudy.data.name}
+                    </h3>
+                  </a>
+
+                  <p class="mt-1 text-base leading-relaxed text-dark-300">
+                    {caseStudy.data.shortDescription}
+                  </p>
+                  <div class="mt-8 flex">
+                    <SecondaryButton size="sm" href={`/work/${caseStudy.id}`}>
+                      Case study
+                    </SecondaryButton>
+                  </div>
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+
+      {/* Filters */}
+      <div class="order-1 md:order-2 md:col-span-3">
+        <div class="text-center md:text-left">
+          <h3 class="text-2xl font-bold text-white">Filter Projects</h3>
+
+          {/* Filters container */}
+          <div
+            class="mt-3 flex flex-wrap justify-center space-x-3 space-y-3 md:mt-6 md:flex-col md:justify-start md:space-x-0"
+          >
+            {/* Filter */}
+            <div class="ml-3 mt-3 md:m-0">
+              <a
+                class:list={[
+                  'inline-flex items-center justify-center rounded-r-full rounded-tl-full px-6 py-2 text-sm font-medium tracking-wide text-white md:text-base',
+                  currentCategory == 'all'
+                    ? 'bg-dark-700'
+                    : 'bg-dark-600 duration-200 ease-in-out hover:bg-dark-700',
+                ]}
+                href="/work#archive"
+              >
+                All
+              </a>
+            </div>
+
+            {/* Filter */}
+            {
+              categories.map((category) => {
+                return (
+                  <div>
+                    <a
+                      class:list={[
+                        'inline-flex items-center justify-center rounded-r-full rounded-tl-full px-6 py-2 text-sm font-bold tracking-wide text-white md:text-base',
+                        currentCategory == category.name
+                          ? 'bg-dark-700'
+                          : 'bg-dark-600 duration-200 ease-in-out hover:bg-dark-700',
+                      ]}
+                      href={`/work/${category.slug}#archive`}
+                    >
+                      {category.name}
+                    </a>
+                  </div>
+                )
+              })
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

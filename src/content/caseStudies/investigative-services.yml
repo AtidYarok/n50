@@ -1,0 +1,44 @@
+name: Investigative Services
+shortDescription: National 50 Security office is staffed with professional state licensed investigators. All of our investigators have prior law enforcement experience and oversee each individual investigation assignment. The investigator controls the needed manpower and the case budget. 
+category: Services
+image:
+  src: '@images/stock/services/investigative-services.jpg'
+  alt: 'abstract art of a hand on a pink background'
+featured: true
+date: April. 2024
+stack:
+  - security
+hero:
+  tagline: Investigative Services
+  headline: National 50 Security office is staffed with professional state licensed investigators. 
+  
+about:
+  tagline: About the service
+  text: 'National 50 Security office is staffed with professional state licensed investigators. All of our investigators have prior law enforcement experience and oversee each individual investigation assignment. The investigator controls the needed manpower and the case budget.'
+  text2: 'Our investigative assignments are civil only. We refrain from becoming involved in criminal matters . From civil cases to personal matters, our investigators will review the case and meet with the prospective client to glean needed information and to approximate the expenses that a client may incur. '
+  text3: 'As in any work we perform, we are fully licensed and insured.'
+statsSection:
+  tagline: ''
+  headline: ''
+  text: ''
+  action:
+    href: '#'
+    label: ''
+  stats:
+    - label: ''
+      value: ''
+    - label: ''
+      value: ''
+    - label: ''
+      value: ''
+featuresSection:
+  tagline: ''
+  headline: ''
+  text: ''
+  features:
+    - tagline: ''
+      headline: ''
+      text: ''
+      image:
+        src: '@images/stock/services/security-solutions.jpg'
+        alt: 'Art piece'

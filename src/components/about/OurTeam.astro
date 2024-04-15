@@ -1,0 +1,93 @@
+---
+import { Image } from 'astro:assets'
+import { Icon } from 'astro-icon'
+import PrimaryButton from '@components/buttons/PrimaryButton.astro'
+
+import image1 from '@images/stock/our-team.jpg'
+
+import testimonialImage1 from '@images/stock/testimonials/testimonial-01.jpg'
+import testimonialImage2 from '@images/stock/testimonials/testimonial-02.jpg'
+import testimonialImage3 from '@images/stock/testimonials/testimonial-03.jpg'
+import testimonialImage4 from '@images/stock/testimonials/testimonial-04.jpg'
+
+const image = {
+      src: image1,
+      alt: 'Casual work meeting',
+    }
+
+    const ourTeam = [
+  {
+    label: 'Management',
+    description:
+      'Our management team is available 24 hour a day 7 days a week to monitor your account,',
+    icon: 'clipboard-list',
+    link: ''
+  },
+  {
+    label: 'Our Employees',
+    description:
+      'We invest considerable time and expense in our most important asset, our security personnel.',
+    icon: 'clipboard-list',
+    link: ''
+  },
+  {
+    label: 'Field Supervisors',
+    description:
+      'Our reputation is built on the fact that we provide our clients with field supervisors at no cost to them.',
+    icon: 'clipboard-list',
+    link: ''
+  },
+  {
+    label: 'Paramedical & EMT Medical Servicess',
+    description:
+      'We offer fully qualified, licensed and trained Paramedics and EMTs',
+    icon: 'clipboard-list',
+    link: ''
+  },
+]
+---
+
+<section
+  class="mx-auto max-w-screen-xl px-4 pb-12 pt-10 sm:px-6 md:pb-16 md:pt-12 lg:px-8"
+>
+  {/* Section text */}
+  <div class="mx-auto w-full max-w-xl text-center md:max-w-2xl lg:max-w-3xl">
+    <p
+      class="inline-flex items-center justify-center rounded-r-full rounded-tl-full bg-gradient-to-r from-dark-600 to-dark-700 px-6 py-2 text-sm font-medium tracking-wide text-white"
+    >
+      Our Team
+    </p>
+    
+  </div>
+
+  {/* Testimonials grid */}
+  <div
+    class="mt-12 grid gap-4 sm:gap-6 md:grid-cols-2 md:grid-rows-3 lg:mt-14 lg:gap-8 xl:grid-cols-3 xl:grid-rows-2"
+  >
+    {/* Image collage */}
+      <div class="relative rounded-3xl shadow-xl row-span-2">
+        <Image
+          src={image.src}
+          alt={image.alt}
+          class="h-full w-full rounded-3xl object-cover object-center"
+        />
+      </div>
+    {
+      ourTeam.slice(0, 4).map((item) => (
+      <div class="w-full">
+        <a href={item.link} >
+          <span class="mx-auto flex h-18 w-18 items-center justify-center rounded-3xl bg-gradient-to-r from-dark-600 to-dark-700 shadow-xl">
+            <Icon name={item.icon} class="h-10 w-10 text-dark-300" />
+          </span>
+          <h3 class="mt-5 text-center text-2xl font-semibold text-white">
+            {item.label}
+          </h3>
+          <p class="mt-2 text-center text-lg leading-relaxed text-dark-300">
+            {item.description}
+          </p>
+        </a>
+        </div>
+      ))
+    }
+  </div>
+</section>

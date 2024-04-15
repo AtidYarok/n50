@@ -1,0 +1,92 @@
+---
+import { Icon } from 'astro-icon'
+import SecondaryButton from '@components/buttons/SecondaryButton.astro'
+
+const services = [
+  {
+    service: 'UI/UX Design',
+    text: 'Transforming ideas into visually compelling and functional designs that users love.',
+    icon: 'box',
+  },
+  {
+    service: 'Web Development',
+    text: 'Crafting robust and responsive websites that seamlessly operate across devices.',
+    icon: 'circles',
+  },
+  {
+    service: 'Mobile App Development',
+    text: 'Creating intuitive, feature-rich mobile apps that engage and retain users.',
+    icon: 'circle-square',
+  },
+  {
+    service: 'Digital Marketing',
+    text: 'Driving brand awareness and growth through tailored digital marketing strategies.',
+    icon: 'diamond',
+  },
+  {
+    service: 'Branding Services',
+    text: 'Building strong, cohesive brand identities that resonate with target audiences.',
+    icon: 'stack',
+  },
+  {
+    service: 'SEO Optimization',
+    text: 'Enhancing your online visibility and ranking through proven SEO strategies.',
+    icon: 'triangles',
+  },
+]
+---
+
+<section class="bg-dark-900 px-4 pb-10 pt-10 sm:px-6 md:pb-12 md:pt-12 lg:px-8">
+  <div class="mx-auto flex w-full max-w-screen-xl flex-wrap items-center">
+    <div class="flex w-full flex-wrap">
+      {/* Section header with button */}
+      <div class="relative flex w-full lg:w-1/3">
+        <div class="relative flex w-full">
+          <div class="relative flex w-full flex-wrap lg:flex-col">
+            <div class="relative w-full">
+              <p
+                class="inline-flex items-center justify-center rounded-r-full rounded-tl-full bg-gradient-to-r from-dark-600 to-dark-700 px-6 py-2 text-sm font-medium tracking-wide text-white"
+              >
+                What we offer
+              </p>
+              <h2
+                class="relative mt-6 w-full text-left text-3xl font-extrabold text-white sm:text-4xl md:text-5xl"
+              >
+                We've Got You <br /> Covered
+              </h2>
+            </div>
+            <div class="mt-8 flex text-left lg:mt-10">
+              <SecondaryButton
+                size="sm"
+                gradient="from-dark-600 to-dark-700"
+                href="/work"
+              >
+                View work
+              </SecondaryButton>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* 2x6 features grid */}
+      <div class="relative mt-16 flex w-full lg:w-2/3 lg:pl-8">
+        <div class="grid w-full gap-y-10 sm:grid-cols-2 sm:gap-x-8 sm:gap-y-16">
+          {
+            services.map((item) => (
+              <div class="relative flex w-full flex-col">
+                <span class="flex h-16 w-16 items-center justify-center rounded-3xl bg-gradient-to-r from-dark-600 to-dark-700 shadow-xl">
+                  <Icon name={item.icon} class="h-8 w-8 text-dark-300" />
+                </span>
+                <h4 class="mt-4 text-2xl font-semibold text-white">
+                  {item.service}
+                </h4>
+                <p class="mt-1 max-w-sm text-lg leading-relaxed text-dark-300">
+                  {item.text}
+                </p>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,32 @@
+---
+import { twMerge } from 'tailwind-merge'
+import type { HTMLAttributes } from 'astro/types'
+
+interface CustomProps {
+  href?: string
+}
+
+type Props = CustomProps & HTMLAttributes<'a'> & HTMLAttributes<'button'>
+
+const {
+  href,
+  class: className = 'hover:bg-dark-900 h-14',
+  ...attrs
+} = Astro.props
+
+const defaultClassName =
+  'duration-250 text-dark-900 flex w-auto items-center justify-center rounded-full bg-white px-8 py-3 font-semibold leading-snug transition ease-in-out hover:text-white focus:outline-none'
+const mergedClasses = twMerge(defaultClassName, className)
+---
+
+{
+  href ? (
+    <a href={href} class={mergedClasses} {...attrs}>
+      <slot />
+    </a>
+  ) : (
+    <button class={mergedClasses} {...attrs}>
+      <slot />
+    </button>
+  )
+}

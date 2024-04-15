@@ -1,0 +1,60 @@
+---
+import Layout from '@layouts/Layout.astro'
+import ServicesHero from '@components/services/ServicesHero.astro'
+import SimpleFeaturesAlternating from '@components/services/SimpleFeaturesAlternating.astro'
+import ServicesList from '@components/services/ServicesList.astro'
+import FeaturedWork from '@components/work/FeaturedWork.astro'
+import FeaturesWithList from '@components/services/FeaturesWithList.astro'
+import Process from '@components/shared/Process.astro'
+import CallToAction from '@components/shared/CallToAction.astro'
+import { SITE } from '@config'
+---
+
+<Layout
+  title={`Services - ${SITE.title}`}
+  description="Discover a diverse range of security services meticulously designed to meet your unique requirements. "
+>
+  <ServicesHero />
+
+  {/* Diagonal section separator */}
+  <div class="relative h-16 w-full bg-dark-900 md:h-32">
+    <svg
+      class="absolute h-full w-full text-dark-800"
+      preserveAspectRatio="none"
+      viewBox="0 0 100 100"
+      fill="currentcolor"
+    >
+      <polygon points="0,100 100,100 100,0"></polygon>
+    </svg>
+  </div>
+
+  <FeaturesWithList />
+
+  <section class="bg-dark-800 px-4 py-12 sm:px-6 md:py-16 lg:px-8">
+    <div class="mx-auto max-w-screen-xl">
+      {/* Services Sub header */}
+      <div class="mx-auto w-full max-w-3xl text-center lg:max-w-5xl">
+        <p
+          class="inline-flex items-center justify-center rounded-r-full rounded-tl-full bg-gradient-to-r from-dark-600 to-dark-700 px-6 py-2 text-sm font-medium tracking-wide text-white"
+        >
+          Our Services
+        </p>
+        <h1
+          class="mt-4 text-4xl font-extrabold text-white sm:text-5xl md:mt-5 md:text-6xl"
+        >
+          Explore Our Services
+        </h1>
+      </div>
+
+      {/* Featured work */}
+      <FeaturedWork />
+    </div>
+  </section>
+  <section
+    class="bg-gradient-to-b from-dark-800 to-dark-900 pb-12 pt-12 md:pb-16 md:pt-16 lg:pt-28"
+  >
+  <CallToAction />
+  </section>
+
+  
+</Layout>

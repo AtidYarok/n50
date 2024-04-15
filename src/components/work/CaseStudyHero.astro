@@ -1,0 +1,114 @@
+---
+import { Image } from 'astro:assets'
+import { Icon } from 'astro-icon'
+import type { CaseStudy } from '@types'
+
+interface Props {
+  caseStudy: CaseStudy
+}
+
+const { caseStudy } = Astro.props
+---
+
+<section class="px-4 py-12 sm:px-6 md:py-16 lg:px-8">
+  <div class="mx-auto max-w-screen-xl">
+     {/* Hero text */}
+     <div class="mx-auto w-full max-w-3xl text-center lg:max-w-5xl">
+      <p
+        class="inline-flex items-center justify-center rounded-r-full rounded-tl-full bg-gradient-to-r from-dark-600 to-dark-700 px-6 py-2 text-sm font-medium tracking-wide text-white"
+      >
+        {caseStudy.data.hero.tagline}
+      </p>
+      <h1
+        class="mt-4 text-4xl font-extrabold text-white sm:text-5xl md:mt-5 md:text-6xl"
+      >
+        {caseStudy.data.hero.headline}
+      </h1>
+    </div>
+    {/* Hero image */}
+    <div
+      class="aspect-h-1 aspect-w-2 relative mx-auto mt-12 rounded-3xl shadow-xl lg:mt-16"
+      transition:name={caseStudy.id}
+    >
+      <Image
+        class="absolute inset-0 h-full w-full rounded-3xl object-cover object-center align-middle"
+        src={caseStudy.data.image.src}
+        alt={caseStudy.data.image.alt}
+      />
+    </div>    
+    {/* Features container */}
+    <div
+      class="mx-auto mt-12 grid w-full max-w-lg gap-10 lg:mt-16 lg:max-w-none lg:grid-cols-3 lg:gap-x-12"
+    >
+      {
+        caseStudy.data.hero.keyPoints && caseStudy.data.hero.keyPoints.length > 0 && caseStudy.data.hero.keyPoints.slice(0, 3).map((item) => (
+          <div class="w-full">
+            {item.icon && (
+            <span class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-r from-dark-600 to-dark-700 shadow-xl">
+              <Icon name={item.icon} class="h-9 w-9 text-dark-300" />
+            </span>
+            )}
+            <h3 class="mt-5 text-center text-2xl font-semibold text-white">
+              {item.label}
+            </h3>
+            <p class="mt-2 text-center text-lg leading-relaxed text-dark-300">
+              {item.text}
+            </p>
+          </div>
+        ))
+      }
+      {
+        caseStudy.data.hero.keyPoints2 && caseStudy.data.hero.keyPoints2.length > 0 && caseStudy.data.hero.keyPoints2.slice(0, 3).map((item) => (
+          <div class="w-full">
+            {item.icon && (
+            <span class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-r from-dark-600 to-dark-700 shadow-xl">
+              <Icon name={item.icon} class="h-9 w-9 text-dark-300" />
+            </span>
+            )}
+            <h3 class="mt-5 text-center text-2xl font-semibold text-white">
+              {item.label}
+            </h3>
+            <p class="mt-2 text-center text-lg leading-relaxed text-dark-300">
+              {item.text}
+            </p>
+          </div>
+        ))
+      }
+      {
+        caseStudy.data.hero.keyPoints3 && caseStudy.data.hero.keyPoints3.length > 0 && caseStudy.data.hero.keyPoints3.slice(0, 3).map((item) => (
+          <div class="w-full">
+            {item.icon && (
+            <span class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-r from-dark-600 to-dark-700 shadow-xl">
+              <Icon name={item.icon} class="h-9 w-9 text-dark-300" />
+            </span>
+            )}
+            <h3 class="mt-5 text-center text-2xl font-semibold text-white">
+              {item.label}
+            </h3>
+            <p class="mt-2 text-center text-lg leading-relaxed text-dark-300">
+              {item.text}
+            </p>
+          </div>
+        ))
+      }
+      {
+        caseStudy.data.hero.keyPoints4 && caseStudy.data.hero.keyPoints4.length > 0 && caseStudy.data.hero.keyPoints4.slice(0, 2).map((item) => (
+          <div class="w-full">
+            {item.icon && (
+            <span class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-r from-dark-600 to-dark-700 shadow-xl">
+              <Icon name={item.icon} class="h-9 w-9 text-dark-300" />
+            </span>
+            )}
+            <h3 class="mt-5 text-center text-2xl font-semibold text-white">
+              {item.label}
+            </h3>
+            <p class="mt-2 text-center text-lg leading-relaxed text-dark-300">
+              {item.text}
+            </p>
+          </div>
+        ))
+      }
+    </div>
+    
+  </div>
+</section>
