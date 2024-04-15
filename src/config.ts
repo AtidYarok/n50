@@ -6,7 +6,7 @@ export const SITE: Site = {
   description:
     "Crator is a digital agency with a focus on creative, interactive and innovative design and development. Our team of designers, developers and strategists work together to create customized solutions that are unique to each client's needs.",
   title: 'National 50',
-  ogImage: 'crator-og.png',
+  ogImage: 'weblogo.png',
 }
 
 export const CONTACT: Contact = {
