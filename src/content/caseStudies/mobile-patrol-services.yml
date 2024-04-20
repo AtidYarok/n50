@@ -2,7 +2,7 @@ name: Mobile Patrol Services
 shortDescription: Consists of private vehicle patrol, bicycles or golf Carts that never leave your property, except for fuel and maintenance and will not be used at any other location. 
 category: Services
 image:
-  src: '@images/stock/services/mobile-patrol.jpg'
+  src: '@images/stock/services/patrol.jpg'
   alt: 'abstract art of a hand on a pink background'
 featured: true
 date: April. 2024
