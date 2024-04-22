@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 const defaultTheme = require('tailwindcss/defaultTheme')
+
 export default {
   content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
   theme: {
@@ -46,12 +47,14 @@ export default {
       transitionDuration: {
         250: '250ms',
       },
-      
-
     },
   },
   daisyui: {
     themes: ["bumblebee", "dark"],
   },
-  plugins: [require('@tailwindcss/aspect-ratio'),require("daisyui")],
+  plugins: [
+    require('@tailwindcss/aspect-ratio'),
+    require("daisyui"),
+    require('@midudev/tailwind-animations'),
+  ],
 }
