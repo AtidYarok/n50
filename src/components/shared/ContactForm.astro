@@ -1,0 +1,65 @@
+---
+import PrimaryButton from '@components/buttons/PrimaryButton.astro'
+import TextField from '@components/contact/TextField.astro'
+---
+
+<section class="bg-white">
+  <div class="mx-auto max-w-screen-xl">
+    <div class="">
+      
+      {/* Contact form card */}
+      <div class="w-full lg:mt-0">
+        <div
+          class="relative mx-auto w-full rounded-3xl bg-white px-4 py-12 shadow-xl sm:p-16 lg:ml-auto lg:mr-0 lg:p-14 xl:p-16"
+        >
+        <div class="absolute -top-14 p-4 bg-amber-400 box-content inline-block">
+        <h5 class="">
+          CONTACT US FOR INQUIRY</h5>
+        </div>
+          {/* Contact form */}
+          <form action="#" class="space-y-6">
+            <div class="grid grid-cols-3 gap-10">
+              <TextField
+              name="name"
+              label="Name *"
+              placeholder="John Doe"
+              required
+            />
+            <TextField
+              name="email"
+              label="Email *"
+              type="email"
+              autocomplete="email"
+              placeholder="john@email.com"
+              required
+            />
+            <TextField
+              label="Phone"
+              name="phone"
+              type="tel"
+              autocomplete="tel"
+              placeholder="+1 (800) 123-4567"
+            />
+            </div>
+            <div class="flex items-center justify-center ">
+            <div class="w-4/5">
+              <TextField
+              label="Message *"
+              name="message"
+              rows={3}
+              elementType="textarea"
+              placeholder="Tell us how we can help you..."
+              required
+            />
+          </div>
+            <div class="w-1/5 flex self-end justify-end">
+              <PrimaryButton type="submit">Send message</PButton>
+            </div>
+            </div>
+            
+          </form>
+        </>
+      </div>
+    </div>
+  </div>
+</section>

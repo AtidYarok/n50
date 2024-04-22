@@ -1,0 +1,128 @@
+---
+import { Image } from 'astro:assets'
+import Icon from 'astro-icon'
+import PrimaryButton from '@components/buttons/PrimaryButton.astro'
+import SecondaryButton from '@components/buttons/SecondaryButton.astro'
+
+import CenterImage from '@images/stock/police-man.png'
+import sectionbg from '@images/stock/light-bg.png'
+---
+
+  {/* White Section- Services*/}
+  <section class="bg-white px-4 pt-12 sm:px-6 lg:px-8">
+    
+    <div class="mx-auto max-w-screen-md lg:max-w-screen-xl">
+      
+      <div class="flex w-full justify-center">
+        <h1 class="text-3xl font-bold text-dark-900">SERVICES</h1>
+      </div>
+      {/* Project description */}
+      <div class="mx-auto py-8 flex w-4/5 flex-wrap">
+        <div class="mx-auto w-full">
+          <p
+            class="mb-6 text-1xl text-justify font-normal tracking-tight text-dark-900 lg:leading-tight"
+          >
+          National 50 Security and Investigations Inc. offers a wide array of
+          services to its clients. Our security officers are license, qualified and
+          professionals. Our officers are highly trained and provide the best
+          security available. Our officers operate within the rules of law and
+          within the regulations and guidelines of the Bureau of Security and
+          Investigative Services.
+          </p>
+      </div>
+    </div>
+  </section>
+
+<section class="bg-white ">
+  <div class="mx-auto grid max-w-screen-md grid-cols-3 gap-8 lg:max-w-screen-xl pb-16">
+    <div class="flex flex-col gap-8 place-content-around">
+      <div class="grid grid-cols-5 gap-6">
+        <h3 class="col-span-4 text-dark-900 font-bold text-right">
+          FULLY UNIFORMED, ARMED AND UNARMED
+        </h3>
+        <Icon name="checks" class="w-12 p-2 outline outline-amber-300" />
+      </div>
+      <div class="grid grid-cols-5 gap-6">
+        <h3 class="col-span-4 text-dark-900 font-bold text-right">
+          SECURITY OFFICES, DEDICATED TO YOUR SPECIAL NEEDS
+        </h3>
+        <Icon name="checks" class="w-12 p-2 outline outline-amber-300" />
+      </div>
+      <div class="grid grid-cols-5 gap-6">
+        <h3 class="col-span-4 text-dark-900 font-bold text-right">
+          CUSTOMIZABLE SECURITY SOLUTIONS
+        </h3>
+        <Icon name="checks" class="w-12 p-2 outline outline-amber-300" />
+      </div>
+      <div class="grid grid-cols-5 gap-6">
+        <h3 class="col-span-4 text-dark-900 font-bold text-right">
+          REGULAR TRACKING & REPORTING, ELECTRONIC AND PAPER
+        </h3>
+        <Icon name="checks" class="w-12 p-2 outline outline-amber-300" />
+      </div>
+      <div class="grid grid-cols-5 gap-6">
+        <h3 class="col-span-4 text-dark-900 font-bold text-right">
+          PARAMEDIC & EMT MEDICL SERVICES
+        </h3>
+        <Icon name="checks" class="w-12 p-2 outline outline-amber-300" />
+      </div>
+      <div class="grid grid-cols-5 gap-6">
+        <h3 class="col-span-4 text-dark-900 font-bold text-right">
+          FIELD SUPERVISORS (NOADDITIONAL CLIENT COST)
+        </h3>
+        <Icon name="checks" class="w-12 p-2 outline outline-amber-300" />
+      </div>
+    </div>
+    <div class="relative w-full md:mt-0 min-h-80">
+      <Image
+        src={CenterImage}
+        alt="description"
+        class="h-full w-full rounded-t-3xl object-cover object-center"
+      />
+    </div>
+    <div class="flex flex-col gap-8 place-content-around">
+      <div class="grid grid-cols-5 gap-6">
+        
+        <Icon name="checks" class="w-12 p-2 outline outline-amber-300" />
+        <h3 class="col-span-4 text-dark-900 font-bold">
+          24 HOURS COMMUNICATIONS
+        </h3>
+      </div>
+      <div class="grid grid-cols-5 gap-6">
+        
+        <Icon name="checks" class="w-12 p-2 outline outline-amber-300" />
+        <h3 class="col-span-4 text-dark-900 font-bold">
+          INESTIGATIVE SERVICES (LICENSED PRIVATE INVESTIGATORS)
+        </h3>
+      </div>
+      <div class="grid grid-cols-5 gap-6">
+        
+        <Icon name="checks" class="w-12 p-2 outline outline-amber-300" />
+        <h3 class="col-span-4 text-dark-900 font-bold">
+          CAMERA SYSTEMS AND TRAINED MONITORING OFFICERS
+        </h3>
+      </div>
+      <div class="grid grid-cols-5 gap-6">
+       
+        <Icon name="checks" class="w-12 p-2 outline outline-amber-300" />
+        <h3 class="col-span-4 text-dark-900 font-bold">
+          TRAINED DISPATCHERS AND COMMUNICATION SPECIALITS
+        </h3>
+      </div>
+      <div class="grid grid-cols-5 gap-6">
+        
+        <Icon name="checks" class="w-12 p-2 outline outline-amber-300" />
+        <h3 class="col-span-4 text-dark-900 font-bold">
+          THREAT ANALYSIS & EVALUATION EXPERTS
+        </h3>
+      </div>
+      <div class="grid grid-cols-5 gap-6">
+        
+        <Icon name="checks" class="w-12 p-2 outline outline-amber-300" />
+        <h3 class="col-span-4 text-dark-900 font-bold">
+          MOBIL SECURITY PATRAL UNITS
+        </h3>
+      </div>
+    </div>
+  </div>
+</section>

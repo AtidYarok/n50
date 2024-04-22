@@ -4,27 +4,32 @@ import PrimaryButton from '@components/buttons/PrimaryButton.astro'
 import SecondaryButton from '@components/buttons/SecondaryButton.astro'
 
 import heroImage from '@images/stock/home-hero2.jpg'
-import herobg from '@images/stock/hero-bg.jpg'
+import herovideo from '@video/MainSlideShow.mp4'
 ---
-
-<section
-  class="mx-auto max-w-screen-2xl px-4 pb-12 pt-2 sm:px-6 md:pb-16 lg:px-8"
->
+<header class="relative flex items-center justify-center h-screen overflow-hidden">
+  <video
+    autoplay
+    loop
+    muted
+    class="absolute w-auto min-w-full min-h-full max-w-none"
+  >
+    <source
+      src={herovideo}
+      type="video/mp4"
+    />
+    Your browser does not support the video tag.
+  </video>
   {/* Hero card */}
-  <div class="relative rounded-3xl bg-dark-700 bg-opacity-80 shadow-xl sm:overflow-hidden" >
+  <div class="relative grid place-content-center bg-dark-700 bg-opacity-80 shadow-xl sm:overflow-hidden  w-auto min-w-full min-h-full max-w-none" >
     
     
     {/* Hero card content */}
     <div
-      class="relative mx-auto max-w-screen-xl px-4 py-16 sm:px-6 sm:py-24 lg:grid lg:auto-rows-max lg:grid-cols-2 lg:gap-x-8 lg:px-8 lg:py-32 xl:gap-x-12"
+      class="z-10  mx-auto max-w-screen-xl "
     >
       {/* Card content text*/}
-      <div class="flex flex-col items-center justify-center lg:items-start">
-        <p
-          class="z-30 inline-flex items-center justify-center rounded-r-full rounded-tl-full bg-gradient-to-r from-dark-800 to-dark-900 px-6 py-2 text-sm font-medium tracking-wide text-white"
-        >
-          Welcome
-        </p>
+      <div class="flex flex-col items-center justify-center">
+        
         <div
           class="z-30 mx-auto mt-6 w-full max-w-lg text-center md:max-w-2xl lg:max-w-none lg:text-left"
         >
@@ -38,23 +43,14 @@ import herobg from '@images/stock/hero-bg.jpg'
           </p>
         </div>
         {/* Hero buttons */}
-        <div class="z-30 mt-10 sm:flex sm:justify-center lg:justify-start">
+        <div class="z-30 mt-10 flex justify-around">
           <PrimaryButton href="/about">Learn more</PrimaryButton>
-          <SecondaryButton class="ml-0 mt-5 sm:ml-4 sm:mt-0" href="/services">
+          <PrimaryButton class="bg-white text-dark-900 mx-8 hover:text-dark-900" href="/services">
             Our Services
-          </SecondaryButton>
+          </PrimaryButton>
         </div>
-      </div>
-      {/* Hero image */}
-      <div
-        class="relative mx-auto mt-12 flex w-full max-w-xl items-center justify-center sm:mt-16 lg:mt-0 lg:max-w-none"
-      >
-        <Image
-          src={heroImage}
-          alt="Crator studio office"
-          class="z-30 h-full w-auto rounded-3xl object-cover shadow-md"
-        />
       </div>
     </div>
   </div>
-</section>
+  
+</header>

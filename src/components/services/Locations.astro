@@ -1,0 +1,138 @@
+---
+import { Image } from 'astro:assets'
+import Icon from 'astro-icon'
+import PrimaryButton from '@components/buttons/PrimaryButton.astro'
+import SecondaryButton from '@components/buttons/SecondaryButton.astro'
+
+import apartmentsComplexes from '@images/stock/locations/apartments.jpg'
+import construction from '@images/stock/locations/construction.jpg'
+import office from '@images/stock/locations/office.jpg'
+import production from '@images/stock/locations/production.jpg'
+import hotels from '@images/stock/locations/hotel.jpg'
+import retail from '@images/stock/locations/retail.jpg'
+import shopping from '@images/stock/locations/shopping.jpg'
+import restaurants from '@images/stock/locations/restaurant.jpg'
+import commercial from '@images/stock/locations/commercial.jpg'
+import special from '@images/stock/locations/special.jpg'
+import state from '@images/stock/locations/state.jpg'
+
+import herobg from '@images/stock/hero-bg.jpg'
+
+const headline = 'Locations and Businesses Serviced'
+
+const locations = [
+  {
+    headline: 'Apartments Complexes',
+    image: {
+      src: apartmentsComplexes,
+      alt: 'Three people working on table and laughing',
+    },
+  },
+  {
+    headline: 'Construction Sites',
+    image: {
+      src: construction,
+      alt: 'Three people working on table and laughing',
+    },
+  },
+  {
+    headline: 'Office Buildings',
+    image: {
+      src: office,
+      alt: 'Three people working on table and laughing',
+    },
+  },
+  {
+    headline: 'Production & Broadcasting Locations',
+    image: {
+      src: production,
+      alt: 'Three people working on table and laughing',
+    },
+  },
+  {
+    headline: 'Hotels',
+    image: {
+      src: hotels,
+      alt: 'Three people working on table and laughing',
+    },
+  },
+  {
+    headline: 'Retail Outlets',
+    image: {
+      src: retail,
+      alt: 'Three people working on table and laughing',
+    },
+  },
+  {
+    headline: 'Shopping centers',
+    image: {
+      src: shopping,
+      alt: 'Three people working on table and laughing',
+    },
+  },
+  {
+    headline: 'Restaurants',
+    image: {
+      src: restaurants,
+      alt: 'Three people working on table and laughing',
+    },
+  },
+  {
+    headline: 'Commercial and Factory Sites',
+    image: {
+      src: commercial,
+      alt: 'Three people working on table and laughing',
+    },
+  },
+  {
+    headline: 'Special Events',
+    image: {
+      src: special,
+      alt: 'Three people working on table and laughing',
+    },
+  },
+  {
+    headline: 'State of California Authorized Security Company',
+    image: {
+      src: state,
+      alt: 'Three people working on table and laughing',
+    },
+  },
+]
+---
+
+  {/* White Section- Services*/}
+  <section class="bg-dark-900 px-4 pt-12 sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-screen-md lg:max-w-screen-xl">
+      
+      {/* Project description */}
+      <div class="mx-auto py-8 flex w-4/5 flex-wrap">
+        <div class="mx-auto w-full">
+          <div class="flex w-full justify-center">
+            <h1 class="text-3xl font-bold text-white">{headline}</h1>
+          </div>
+      </div>
+    </div>
+  </section>
+
+<section class="bg-dark-900 ">
+  <div class="mx-auto grid max-w-screen-md grid-cols-4 gap-8 lg:max-w-screen-xl pb-16">
+    {
+      locations.map((location, i) => (
+      <div class="grid grid-rows-5 place-content-center">
+        <h3 class="text-white font-bold text-center place-content-start">
+          {location.headline.toUpperCase()}
+        </h3>
+        <div class="relative w-full row-span-4 md:mt-0 place-content-center">
+          <Image
+            src={location.image.src}
+            alt={location.image.alt}
+            class="max-h-40 w-full rounded-t-3xl object-cover object-center"
+          />
+        </div>
+      </div>
+    )
+    )
+  }
+  </div>
+</section>

@@ -4,7 +4,7 @@ export const SITE: Site = {
   website: 'https://national50.com', // replace this with your deployed domain
   author: 'Atid Yarok',
   description:
-    "Crator is a digital agency with a focus on creative, interactive and innovative design and development. Our team of designers, developers and strategists work together to create customized solutions that are unique to each client's needs.",
+    "National 50 Security and Investigations Inc. is a dominant provider of a wide array of security and safety services in each of the markets in which we compete.",
   title: 'National 50',
   ogImage: 'weblogo.png',
 }

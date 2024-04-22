@@ -1,16 +1,15 @@
 ---
 import PrimaryButton from '@components/buttons/PrimaryButton.astro'
 import { Image } from 'astro:assets'
+import { Icon } from 'astro-icon'
 
-import logo from '@images/logo.svg'
+import logo from '@images/logo-h.svg'
 
 const navbar = {
   navigation: [
-    { label: 'Home', href: '/' },
-    { label: 'About Us', href: '/about' },
-    { label: 'Services', href: '/services' },
-    { label: 'Our Team', href: '/about#ourteam' },
-    
+    { label: 'HOME', href: '/' },
+    { label: 'ABOUT US', href: '/about' },
+    { label: 'SERVICES', href: '/services' },
   ],
   action: {
     label: "Let's talk",
@@ -19,43 +18,85 @@ const navbar = {
 }
 
 const pathname = Astro.url.pathname.replace(/(?<=.)\/$/, '')
+
 ---
 
-<header class="bg-dark-900 glass">
-  <nav class="mx-auto flex max-w-7xl items-center px-4 py-6 sm:px-6 lg:px-8">
-    <div class="flex w-full items-center justify-between">
-      {/* Logo */}
-      <div class="flex items-center">
-        <a href="/" class="group text-2xl font-black lg:block">
-        <div class="group flex h-36 w-full items-center justify-center rounded-3xl">
-          <Image
-          src={logo}
-          alt="National 50"
-          class="z-30 h-full w-auto "
-        />
+<header class="bg-white z-10">
+  <!--Header-Upper-->
+  <div class="mx-auto flex max-w-7xl items-center px-4 py-6 sm:px-6 lg:px-8">
+      <div class="flex w-full items-center justify-around">
+        <div class="flex items-center">
+          <a href="/" class="group text-2xl font-black lg:block">
+          <div class="group flex h-36 w-full items-center justify-center rounded-3xl">
+            <Image
+            src={logo}
+            alt="National 50"
+            class="z-30 h-full w-auto "
+          />
+          </div>
+          </a>
         </div>
-        </a>
-      </div>
 
-      {/* Main menu for large screens */}
-      <div
-        class="hidden items-center justify-between text-xl font-medium text-dark-300 md:flex md:space-x-0.5 md:text-base lg:space-x-2"
-      >
+        <div class="flex">
+
+          <div class="flex">
+            <Icon name="calendar" class="mr-2 h-7 w-7 text-amber-300" />
+            <div>
+             <h3>WORKING HOURS</h3> 
+             <h5 class="light-text">
+              Moday - Sunday: 8.00am to 10.30pm
+             </h5>
+            </div>
+          </div>
+
+          <div class="flex">
+            <Icon name="phone" class="mr-2 h-7 w-7 text-amber-300" />
+            <div>
+             <h3>TEL. 310-838-2329</h3> 
+             <h5 class="light-text">
+              FAX. 310-838-2985
+             </h5>
+            </div>
+          </div>
+
+          <div class="flex">
+            <Icon name="checks" class="mr-2 h-7 w-7 text-amber-300" />
+            <div>
+             <h3>MAIL US</h3> 
+             <h5 class="light-text">
+              jcorea@national50.com
+             </h5>
+            </div>
+          </div>
+
+          
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <nav class="mx-auto flex max-w-7xl items-center px-4 py-6 sm:px-6 lg:px-8">
+    <div class="flex w-full items-center justify-around">
+      <div class="hidden items-center justify-around text-xl font-medium text-dark-900 md:flex md:space-x-0.5 md:text-base lg:space-x-2">
         {
           navbar.navigation.map((link) => (
             <a
               href={link.href}
               class:list={[
-                'block rounded-full px-4 py-1 sm:inline-block',
+                'block px-4 py-1 sm:inline-block',
                 pathname === link.href
-                  ? 'bg-dark-700 text-white'
-                  : 'duration-200 ease-in-out hover:bg-dark-700 hover:text-white',
+                  ? 'border-t-amber-300 border-t-2'
+                  : 'duration-200 ease-in-out hover:border-t-amber-300 hover:border-t-2',
               ]}
             >
               {link.label}
             </a>
           ))
         }
+      </div>
+      <div>
+        
       </div>
       <div class="hidden md:block">
         {
@@ -129,4 +170,5 @@ const pathname = Astro.url.pathname.replace(/(?<=.)\/$/, '')
       </div>
     </div>
   </nav>
+ 
 </header>

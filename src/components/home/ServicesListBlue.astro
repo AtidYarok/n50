@@ -1,0 +1,175 @@
+---
+import { Image } from 'astro:assets'
+import Icon from 'astro-icon'
+import PrimaryButton from '@components/buttons/PrimaryButton.astro'
+import SecondaryButton from '@components/buttons/SecondaryButton.astro'
+
+import Offduty from '@images/stock/list-02.jpg'
+import Personal from '@images/stock/bodyguard.jpg'
+import Patrol from '@images/stock/MobileSecurityUnits.png'
+import Alarm from '@images/stock/ThreatAnalysis&EvaluationExperts.png'
+import Executive from '@images/stock/agent.jpg'
+import K9 from '@images/stock/k9.jpg'
+import Plain from '@images/stock/plain.jpg'
+import Security from '@images/stock/values.jpg'
+import Investigative from '@images/stock/InvestigativeServices.png'
+import Staffing from '@images/stock/special.jpg'
+import Entertainment from '@images/stock/services/locations.jpg'
+import Dispatchers from '@images/stock/dispatcher.jpg'
+import herobg from '@images/stock/hero-bg.jpg'
+---
+
+<section class="bg-dark-900 py-16">
+  <h3 class="text-white text-center mt-8 pb-8">
+    IN ADDITION TO OFFERING ARMED AND UNARMED SECURITY OFFICERS, NATIONAL 50
+    SECURITY ANS INVESTIGATIONS, INC. <br />
+     ALSO OFFERS SERVICES IN THE FOLLOWING AREAS
+  </h3>
+  {/* First Row */}
+  <div
+    class="mx-auto grid max-w-screen-md grid-cols-4 gap-8 lg:max-w-screen-xl mb-8"
+  >
+    <div class="flex flex-col">
+      <figure class="w-40s relative h-56">
+        <Image
+          src={Offduty}
+          alt="description"
+          class="absolute inset-0 h-full w-full object-cover object-center"
+        />
+        <Icon name="box" class="absolute -bottom-8 w-16 bg-amber-300 p-2" />
+      </figure>
+      <h4 class="ml-20 mt-3 text-sm text-white">OFF-DUTY POLICE OFFICERS</h4>
+    </div>
+    <div class="flex flex-col">
+      <figure class="w-40s relative h-56">
+        <Image
+          src={Personal}
+          alt="description"
+          class="absolute inset-0 h-full w-full object-cover object-center"
+        />
+        <Icon name="box" class="absolute -bottom-8 w-16 bg-amber-300 p-2" />
+      </figure>
+      <h4 class="ml-20 mt-3 text-sm text-white">PERSONAL BODY GUARDS</h4>
+    </div>
+    <div class="flex flex-col">
+      <figure class="w-40s relative h-56">
+        <Image
+          src={Patrol}
+          alt="description"
+          class="absolute inset-0 h-full w-full object-cover object-center"
+        />
+        <Icon name="box" class="absolute -bottom-8 w-16 bg-amber-300 p-2" />
+      </figure>
+      <h4 class="ml-20 mt-3 text-sm text-white">PATROL SERVICES</h4>
+    </div>
+    <div class="flex flex-col">
+      <figure class="w-40s relative h-56">
+        <Image
+          src={Alarm}
+          alt="description"
+          class="absolute inset-0 h-full w-full object-cover object-center"
+        />
+        <Icon name="box" class="absolute -bottom-8 w-16 bg-amber-300 p-2" />
+      </figure>
+      <h4 class="ml-20 mt-3 text-sm text-white">ALARM RESPONSE</h4>
+    </div>
+  </div>
+  {/* Second Row */}
+  <div
+    class="mx-auto grid max-w-screen-md grid-cols-4 gap-8 lg:max-w-screen-xl mb-4"
+  >
+    <div class="flex flex-col">
+      <figure class="w-40s relative h-56">
+        <Image
+          src={Executive}
+          alt="description"
+          class="absolute inset-0 h-full w-full object-cover object-center"
+        />
+        <Icon name="box" class="absolute -bottom-8 w-16 bg-amber-300 p-2" />
+      </figure>
+      <h4 class="ml-20 mt-3 text-sm text-white">EXECUTIVE PROTECTION</h4>
+    </div>
+    <div class="flex flex-col">
+      <figure class="w-40s relative h-56">
+        <Image
+          src={K9}
+          alt="description"
+          class="absolute inset-0 h-full w-full object-cover object-center"
+        />
+        <Icon name="box" class="absolute -bottom-8 w-16 bg-amber-300 p-2" />
+      </figure>
+      <h4 class="ml-20 mt-3 text-sm text-white">K-9 UNIT</h4>
+    </div>
+    <div class="flex flex-col">
+      <figure class="w-40s relative h-56">
+        <Image
+          src={Plain}
+          alt="description"
+          class="absolute inset-0 h-full w-full object-cover object-center"
+        />
+        <Icon name="box" class="absolute -bottom-8 w-16 bg-amber-300 p-2" />
+      </figure>
+      <h4 class="ml-20 mt-3 text-sm text-white">PLAINCLOTHES/UNDERCOVER STAFF</h4>
+    </div>
+    <div class="flex flex-col">
+      <figure class="w-40s relative h-56">
+        <Image
+          src={Security}
+          alt="description"
+          class="absolute inset-0 h-full w-full object-cover object-center"
+        />
+        <Icon name="box" class="absolute -bottom-8 w-16 bg-amber-300 p-2" />
+      </figure>
+      <h4 class="ml-20 mt-3 text-sm text-white">SECURITY AND OTHER SPECIALIZED CONSULTATIONS</h4>
+    </div>
+  </div>
+  {/* Thirth Row */}
+  <div
+    class="mx-auto grid max-w-screen-md grid-cols-4 gap-8 lg:max-w-screen-xl"
+  >
+    <div class="flex flex-col">
+      <figure class="w-40s relative h-56">
+        <Image
+          src={Investigative}
+          alt="description"
+          class="absolute inset-0 h-full w-full object-cover object-center"
+        />
+        <Icon name="box" class="absolute -bottom-8 w-16 bg-amber-300 p-2" />
+      </figure>
+      <h4 class="ml-20 mt-3 text-sm text-white">INVESTIGATIVE SERVICES</h4>
+    </div>
+    <div class="flex flex-col">
+      <figure class="w-40s relative h-56">
+        <Image
+          src={Staffing}
+          alt="description"
+          class="absolute inset-0 h-full w-full object-cover object-center"
+        />
+        <Icon name="box" class="absolute -bottom-8 w-16 bg-amber-300 p-2" />
+      </figure>
+      <h4 class="ml-20 mt-3 text-sm text-white">STAFFING FOR SPECIAL EVENTS</h4>
+    </div>
+    <div class="flex flex-col">
+      <figure class="w-40s relative h-56">
+        <Image
+          src={Dispatchers}
+          alt="description"
+          class="absolute inset-0 h-full w-full object-cover object-center"
+        />
+        <Icon name="box" class="absolute -bottom-8 w-16 bg-amber-300 p-2" />
+      </figure>
+      <h4 class="ml-20 mt-3 text-sm text-white">DISPATCHERS & COMMUNICATION SPACIALISTS</h4>
+    </div>
+    <div class="flex flex-col">
+      <figure class="w-40s relative h-56">
+        <Image
+          src={Entertainment}
+          alt="description"
+          class="absolute inset-0 h-full w-full object-cover object-center"
+        />
+        <Icon name="box" class="absolute -bottom-8 w-16 bg-amber-300 p-2" />
+      </figure>
+      <h4 class="ml-20 mt-3 text-sm text-white">ENTERTEINMENT VENUES</h4>
+    </div>
+  </div>
+</section>

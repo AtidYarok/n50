@@ -4,6 +4,8 @@ export default {
   content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
   theme: {
     extend: {
+      'about-bg': "url('@images/stock/list-01.jpg')",
+
       fontFamily: {
         sans: ['Inter Variable', 'Inter', ...defaultTheme.fontFamily.sans],
       },
@@ -44,7 +46,12 @@ export default {
       transitionDuration: {
         250: '250ms',
       },
+      
+
     },
   },
-  plugins: [require('@tailwindcss/aspect-ratio')],
+  daisyui: {
+    themes: ["bumblebee", "dark"],
+  },
+  plugins: [require('@tailwindcss/aspect-ratio'),require("daisyui")],
 }

@@ -10,12 +10,12 @@ type Props = CustomProps & HTMLAttributes<'a'> & HTMLAttributes<'button'>
 
 const {
   href,
-  class: className = 'hover:bg-dark-900 h-14',
+  class: className = 'hover:bg-white hover:text-dark-900 hover:outline h-14',
   ...attrs
 } = Astro.props
 
 const defaultClassName =
-  'duration-250 text-dark-900 flex w-auto items-center justify-center rounded-full bg-white px-8 py-3 font-semibold leading-snug transition ease-in-out hover:text-white focus:outline-none'
+  'duration-250 text-white flex w-auto items-center justify-center bg-dark-900 px-8 py-3 font-semibold leading-snug transition ease-in-out hover:text-white focus:outline-none'
 const mergedClasses = twMerge(defaultClassName, className)
 ---
 

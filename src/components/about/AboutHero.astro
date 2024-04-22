@@ -1,31 +1,28 @@
 ---
 import { Image } from 'astro:assets'
 import teamImage from '@images/stock/team/team.jpg'
+import herovideo from '@video/MainSlideShow_5_1.mp4'
 ---
 
-<section class="px-4 pb-10 pt-12 sm:px-6 md:pb-12 md:pt-16 lg:px-8">
-  <div class="mx-auto max-w-screen-xl">
-    {/* Hero text */}
-    <div class="mx-auto w-full max-w-4xl text-center lg:max-w-5xl">
-      <p
-        class="inline-flex items-center justify-center rounded-r-full rounded-tl-full bg-gradient-to-r from-dark-600 to-dark-700 px-6 py-2 text-sm font-medium tracking-wide text-white"
-      >
-        About us
-      </p>
-      <h1
-        class="mt-4 text-4xl font-extrabold text-white sm:text-5xl md:mt-5 md:text-6xl"
-      >
-      Protecting Clients, Securing Communities, Building Partnerships
-      </h1>
-      <p
-        class="mx-auto mt-4 max-w-lg text-xl text-dark-300 md:mt-5 md:max-w-3xl"
-      >
-      Empowering Safety and Satisfaction: Our Mission at National 50 Security
-      </p>
-    </div>
-    {/* Hero image */}
-    <div class="mx-auto mt-12 max-w-screen-lg rounded-3xl shadow-xl">
-      <Image class="rounded-3xl" src={teamImage} alt="Agency team" />
+<div class="hero relative flex items-center justify-center overflow-hidden" >
+  <video
+    autoplay
+    loop
+    muted
+    class="absolute w-auto min-w-full min-h-full max-w-none"
+  >
+    <source
+      src={herovideo}
+      type="video/mp4"
+    />
+    Your browser does not support the video tag.
+  </video>
+  <div class="hero-content text-center text-neutral-content py-16">
+    <div class="max-w-md border-white/50 border-solid border-4 p-8 bg-white/70">
+      <h1 class="mb-5 text-5xl font-bold text-dark-900 font-['source_sans_problack']">ABOUT US</h1>
+      <p class="mb-5 text-dark-900">HOME / About Us</p>
     </div>
   </div>
-</section>
+</div>
+
+ 
