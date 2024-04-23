@@ -3,7 +3,7 @@ import PrimaryButton from '@components/buttons/PrimaryButton.astro'
 import { Image } from 'astro:assets'
 import { Icon } from 'astro-icon'
 
-import logo from '@images/logo-h.svg'
+import logo from '@images/logo2.svg'
 
 const navbar = {
   navigation: [
@@ -21,7 +21,7 @@ const pathname = Astro.url.pathname.replace(/(?<=.)\/$/, '')
 
 ---
 
-<header class="bg-white z-10">
+<header class="bg-white z-10 stiky top-0">
   <!--Header-Upper-->
   <div class="mx-auto flex max-w-7xl items-center px-4 pt-6 sm:px-6 lg:px-8">
       <div class="flex w-full items-center justify-around">
@@ -68,9 +68,6 @@ const pathname = Astro.url.pathname.replace(/(?<=.)\/$/, '')
              </h5>
             </div>
           </div>
-
-          
-
         </div>
       </div>
     </div>
