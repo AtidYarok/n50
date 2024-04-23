@@ -1,9 +1,12 @@
 ---
+import { Image } from 'astro:assets'
 import Layout from '@layouts/Layout.astro'
 import PrimaryButton from '@components/buttons/PrimaryButton.astro'
 import TextField from '@components/contact/TextField.astro'
 import SocialButton from '@components/buttons/SocialButton.astro'
 import { SITE, SOCIALS } from '@config'
+
+import supBg from '@images/stock/bgImg2.jpg'
 
 const addresses = [
   {
@@ -21,21 +24,19 @@ const addresses = [
   title={`Contact us - ${SITE.title}`}
   description="Get in touch with our team to discuss how we can help bring your creative vision to life. Reach out to us for collaborative, innovative, and strategic web design and development services."
 >
-  <section class="px-4 py-12 sm:px-6 md:py-16 lg:px-8">
-    <div class="mx-auto max-w-screen-xl">
+  <section class="relative px-4 py-12 sm:px-6 md:py-16 lg:px-8">
+    <Image
+          src={supBg}
+          alt="description"
+          class="absolute inset-0 h-full w-full object-cover object-center fade-in-anim-left"
+        />
+    <div class="relative mx-auto max-w-screen-xl z-10">
       <div class="grid lg:grid-cols-2 lg:gap-x-8 xl:gap-x-16">
         <div
-          class="flex flex-col items-start justify-between sm:items-center lg:items-start"
+          class="flex flex-col h-auto items-center justify-between glass p-10 rounded-2xl"
         >
           {/* Section header */}
           <div>
-            <div class="w-full text-left sm:text-center lg:text-left">
-              <p
-                class="inline-flex items-center justify-center rounded-r-full rounded-tl-full bg-gradient-to-r from-dark-600 to-dark-700 px-6 py-2 text-sm font-medium tracking-wide text-white"
-              >
-                Contact
-              </p>
-            </div>
             <div
               class="mt-4 w-full text-left sm:text-center md:mt-5 lg:text-left"
             >
@@ -72,25 +73,7 @@ const addresses = [
                 </div>
               ))
             }
-          </div>
-          {/* Social media links */}
-          <div class="mt-8 w-full sm:mt-10 lg:mt-0">
-            <h6
-              class="text-left text-lg font-semibold text-white sm:text-center lg:text-left"
-            >
-              Follow us
-            </h6>
-            {/* Links container */}
-            <div
-              class="mt-3 flex justify-start space-x-4 sm:justify-center lg:justify-start"
-            >
-              {
-                SOCIALS.map((social) => (
-                  <SocialButton href={social.href} name={social.name} />
-                ))
-              }
-            </div>
-          </div>
+          </div> 
         </div>
         {/* Contact form card */}
         <div class="mt-12 w-full lg:mt-0">
