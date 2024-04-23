@@ -1,4 +1,7 @@
 ---
+import { Image } from 'astro:assets'
+
+import bgImage1 from '@images/stock/paramedicEMT.png'
 
 const headline = 'PARAMEDIC & EMT MEDICAL SERVICES'
 
@@ -7,21 +10,135 @@ const t1 = 'We offer fully qualified, licensed and trained Paramedics and EMTs, 
 
 ---
 
-        {/* White Section - Mission Statement*/}
-        <section class="bg-white px-4 py-12 sm:px-6 md:py-16 lg:px-8">
-          <div class="mx-auto max-w-screen-md lg:max-w-screen-xl">
-            <div class="flex w-full justify-center">
-              <h1 class="text-3xl font-bold text-dark-900">{headline}</h1>
-            </div>
-            {/* Project description */}
-            <div class="mx-auto mt-6 flex w-full flex-wrap">
-              <div class="mx-auto w-full">
-                <p
-                  class="mb-6 text-2xl font-normal tracking-tight text-dark-900 lg:leading-tight"
-                >
-                  {t1.toUpperCase()}
+{/* Blue Section Mission Statement - animated */}
+<section class="bg-dark-900 pb-10  md:pb-12 ">
+  <div class="mx-auto w-full max-w-screen-xl mt-12 space-y-12 lg:mt-16 lg:space-y-56 lg:pb-24">
+        <div
+          class="relative mx-auto max-w-lg lg:mx-0 lg:max-w-none"
+        >
+          <div
+            class='left-40 relative h-48 w-full rounded-t-3xl bg-cover bg-center shadow-xl lg:h-full lg:w-[90%] lg:rounded-3xl lg:pt-[46%] fade-in-anim-right'
+          >
+            <Image
+              src={bgImage1}
+              alt='descript'
+              class="absolute inset-0 h-full w-full rounded-t-3xl object-cover object-center lg:rounded-3xl"
+            /> 
+            
+          </div>
+          <div
+            class:list={[
+              'relative bottom-0 z-20 block h-auto w-full rounded-b-3xl bg-white p-6 shadow-xl lg:absolute lg:-bottom-25  lg:w-2/3 lg:rounded-3xl lg:p-12 fade-in-anim-left',
+            ]}
+          >
+            <div class="h-full lg:flex lg:flex-col lg:justify-between">
+              <div class="flex w-full flex-wrap">
+                <h3 class="text-3xl font-bold text-dark-900 lg:text-4xl mb-8">
+                  {headline}
+                </h3>
+                <p class="mb-6 text-lg font-normal tracking-tight text-dark-900 lg:leading-tight fade-in-anim-center">
+                  {t1}
                 </p>
-              </div>
+              </div>            
             </div>
           </div>
-        </section>
+        </div>
+  </div>
+  </section>
+
+
+
+<style>
+
+  .fade-in-anim-left {
+    view-timeline: --subjectReveal block;
+    animation-timeline: --subjectReveal;
+  
+    animation-name: fadein-left;
+    animation-fill-mode: both;
+    animation-duration: 1ms; /* Firefox requires this to apply the animation */
+    animation-range: entry 25% cover 50% ;
+  }
+
+  .fade-in-anim-right {
+    view-timeline: --subjectReveal block;
+    animation-timeline: --subjectReveal;
+  
+    animation-name: fadein-right;
+    animation-fill-mode: both;
+    animation-duration: 1ms; /* Firefox requires this to apply the animation */
+    animation-range: entry 25% cover 50% ;
+  }
+
+  .fade-in-anim-center {
+    view-timeline: --subjectReveal block;
+    animation-timeline: --subjectReveal;
+  
+    animation-name: fadein-center;
+    animation-fill-mode: both;
+    animation-duration: 1ms; /* Firefox requires this to apply the animation */
+    animation-range: entry 15% cover 60% ;
+  }
+  .fade-in-anim {
+    view-timeline: --subjectReveal block;
+    animation-timeline: --subjectReveal;
+  
+    animation-name: fadein;
+    animation-fill-mode: both;
+    animation-duration: 1ms; /* Firefox requires this to apply the animation */
+    animation-range: entry 25% cover 50% ;
+  }
+  
+  @keyframes fadein-left {
+  from {
+    opacity: 0;
+    transform: translateX(-300px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadein-right {
+  from {
+    opacity: 0;
+    transform: translateX(300px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadein-center {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+    
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+  
+  </style>
