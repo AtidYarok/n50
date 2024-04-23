@@ -9,9 +9,12 @@ import { SITE } from '@config'
 import HomeLayout from '@layouts/HomeLayout.astro'
 import ServicesListBlue from '@components/home/ServicesListBlue.astro'
 
+import video2 from '@video/MainSlideShow_4.mp4'
+
 import bgImage1 from '@images/stock/bgImg1.jpg'
 import bgImage2 from '@images/stock/light-bg.png'
 import bgImage3 from '@images/stock/InvestigativeServices.png'
+import commandBg from '@images/stock/commandBg.png'
 ---
 
 <HomeLayout
@@ -127,11 +130,35 @@ import bgImage3 from '@images/stock/InvestigativeServices.png'
     </div>
   </section>
 
+  <div class="hero relative flex items-center justify-center overflow-hidden" >
+    <video
+      autoplay
+      loop
+      muted
+      class="absolute w-auto min-w-full min-h-full max-w-none"
+    >
+      <source
+        src={video2}
+        type="video/mp4"
+      />
+      Your browser does not support the video tag.
+    </video>
+    <div class="hero-content text-center text-neutral-content py-32 h-[700px]">
+      
+    </div>
+  </div>
   {/* Blue Section Command and Control*/}
-  <section class="bg-dark-900 px-4 py-12 sm:px-6 md:py-16 lg:px-8">
-    <div class="mx-auto max-w-screen-md lg:max-w-screen-xl">
+  <section class="bg-dark-900 grid grid-cols-2">
+    <div class="relative">
+    <Image
+          src={commandBg}
+          alt="description"
+          class="absolute inset-0 h-full w-full object-cover object-center fade-in-anim-left"
+        />
+      </div>
+    <div class="p-16 relative z-10">
       <div class="flex w-full justify-center">
-        <h1 class="text-3xl font-bold text-white">
+        <h1 class="text-3xl font-bold text-white fade-in-anim-right">
           COMMAND AND CONTROL, DISPATCH, COMMUNICATION AND MONITORING
         </h1>
       </div>
@@ -139,7 +166,7 @@ import bgImage3 from '@images/stock/InvestigativeServices.png'
       <div class="mx-auto mt-6 flex w-full flex-wrap">
         <div class="mx-auto w-full">
           <p
-            class="mb-6 text-2xl font-normal tracking-tight text-white lg:leading-tight"
+            class="mb-6 text-2xl font-normal tracking-tight text-white lg:leading-tight fade-in-anim-right"
           >
             This office provides dedicated and trained professional security
             personal in all areas under the above heading. Our personal are
@@ -156,7 +183,7 @@ import bgImage3 from '@images/stock/InvestigativeServices.png'
             responders.
           </p>
           <p
-            class="mb-6 text-2xl font-normal tracking-tight text-white lg:leading-tight"
+            class="mb-6 text-2xl font-normal tracking-tight text-white lg:leading-tight fade-in-anim-right"
           >
             Whether it is a dispatch center, camera monitoring assignment or the
             solitary security officer on a post, they all have one thing in
@@ -169,14 +196,14 @@ import bgImage3 from '@images/stock/InvestigativeServices.png'
             management at anytime.
           </p>
           <p
-            class="mb-6 text-2xl font-normal tracking-tight text-white lg:leading-tight"
+            class="mb-6 text-2xl font-normal tracking-tight text-white lg:leading-tight fade-in-anim-right"
           >
             Needless to say, communications are critical in the security
             business. Communications in written form, i.e; DAR’s and Reports are
             submitted daily.
           </p>
           <p
-            class="mb-6 text-2xl font-normal tracking-tight text-white lg:leading-tight"
+            class="mb-6 text-2xl font-normal tracking-tight text-white lg:leading-tight fade-in-anim-right"
           >
             Whatever your needs are, National 50 Security and Investigations
             Inc. will work with you to provide a security plan to fit your
