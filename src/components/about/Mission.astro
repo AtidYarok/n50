@@ -1,4 +1,6 @@
 ---
+import { Image } from 'astro:assets'
+
 import bgImage1 from '@images/stock/bgImg1.jpg'
 
 const t1 = 'National 50 Security and Investigations Inc. is a dominant provider of a wide array of security and safety services in each of the markets in which we compete.'
@@ -77,3 +79,99 @@ const t5 = 'For more information, please contact one of our knowledgeable staff 
         </div>
   </div>
   </section>
+
+
+<style>
+
+  .fade-in-anim-left {
+    view-timeline: --subjectReveal block;
+    animation-timeline: --subjectReveal;
+  
+    animation-name: fadein-left;
+    animation-fill-mode: both;
+    animation-duration: 1ms; /* Firefox requires this to apply the animation */
+    animation-range: entry 25% cover 50% ;
+  }
+
+  .fade-in-anim-right {
+    view-timeline: --subjectReveal block;
+    animation-timeline: --subjectReveal;
+  
+    animation-name: fadein-right;
+    animation-fill-mode: both;
+    animation-duration: 1ms; /* Firefox requires this to apply the animation */
+    animation-range: entry 25% cover 50% ;
+  }
+
+  .fade-in-anim-center {
+    view-timeline: --subjectReveal block;
+    animation-timeline: --subjectReveal;
+  
+    animation-name: fadein-center;
+    animation-fill-mode: both;
+    animation-duration: 1ms; /* Firefox requires this to apply the animation */
+    animation-range: entry 15% cover 60% ;
+  }
+  .fade-in-anim {
+    view-timeline: --subjectReveal block;
+    animation-timeline: --subjectReveal;
+  
+    animation-name: fadein;
+    animation-fill-mode: both;
+    animation-duration: 1ms; /* Firefox requires this to apply the animation */
+    animation-range: entry 25% cover 50% ;
+  }
+  
+  @keyframes fadein-left {
+  from {
+    opacity: 0;
+    transform: translateX(-300px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadein-right {
+  from {
+    opacity: 0;
+    transform: translateX(300px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadein-center {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+    
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+  
+  </style>
