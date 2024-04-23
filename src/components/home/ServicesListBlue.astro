@@ -17,255 +17,273 @@ import Staffing from '@images/stock/special.jpg'
 import Entertainment from '@images/stock/services/locations.jpg'
 import Dispatchers from '@images/stock/dispatcher.jpg'
 import herobg from '@images/stock/hero-bg.jpg'
+
+import video2 from '@video/Scene_01.mp4'
 ---
 
-<section class="bg-dark-900 py-16">
-  <h3 class="text-white text-center mt-8 pb-8 fade-in-anim-center">
-    IN ADDITION TO OFFERING ARMED AND UNARMED SECURITY OFFICERS, NATIONAL 50
-    SECURITY ANS INVESTIGATIONS, INC. <br />
-     ALSO OFFERS SERVICES IN THE FOLLOWING AREAS
-  </h3>
+<section class="relative bg-dark-900">
+  <video
+    autoplay
+    loop
+    muted
+    class="absolute min-h-full w-auto min-w-full max-w-none"
+  >
+    <source src={video2} type="video/mp4" />
+     Your browser does not support the video tag.
+  </video>
+  <div class="py-16">
+    <h3 class="mb-2 text-center text-2xl font-bold text-white drop-shadow-lg">
+      IN ADDITION TO OFFERING ARMED AND UNARMED SECURITY OFFICERS, NATIONAL 50
+      SECURITY ANS INVESTIGATIONS, INC. <br />
+       ALSO OFFERS SERVICES IN THE FOLLOWING AREAS
+    </h3>
+  </div>
   {/* First Row */}
   <div
-    class="mx-auto grid max-w-screen-md grid-cols-4 gap-8 lg:max-w-screen-xl mb-8 fade-in-anim" 
+    class="fade-in-anim mx-auto mb-8 grid max-w-screen-md grid-cols-4 gap-8 lg:max-w-screen-xl"
   >
-    <div class="flex flex-col">
-      <figure class="w-40s relative h-56">
+    <div class="flex flex-col rounded-2xl bg-white">
+      <figure class="w-40s relative h-56 rounded-2xl">
         <Image
           src={Offduty}
           alt="description"
-          class="absolute inset-0 h-full w-full object-cover object-center"
+          class="absolute inset-0 h-full w-full rounded-t-2xl object-cover object-center"
         />
-        
       </figure>
-      <h4 class="text-center mt-3 text-normal text-white">OFF-DUTY POLICE OFFICERS</h4>
+      <h4 class="text-normal mt-3 pb-2 text-center font-bold text-dark-900">
+        OFF-DUTY POLICE OFFICERS
+      </h4>
     </div>
-    <div class="flex flex-col">
-      <figure class="w-40s relative h-56">
+    <div class="flex flex-col rounded-2xl bg-white">
+      <figure class="w-40s relative h-56 rounded-2xl">
         <Image
           src={Personal}
           alt="description"
-          class="absolute inset-0 h-full w-full object-cover object-center"
+          class="absolute inset-0 h-full w-full rounded-t-2xl object-cover object-center"
         />
-        
       </figure>
-      <h4 class="text-center mt-3 text-normal text-white">PERSONAL BODY GUARDS</h4>
+      <h4 class="text-normal mt-3 pb-2 text-center font-bold text-dark-900">
+        PERSONAL BODY GUARDS
+      </h4>
     </div>
-    <div class="flex flex-col">
-      <figure class="w-40s relative h-56">
+    <div class="flex flex-col rounded-2xl bg-white">
+      <figure class="w-40s relative h-56 rounded-2xl">
         <Image
           src={Patrol}
           alt="description"
-          class="absolute inset-0 h-full w-full object-cover object-center"
+          class="absolute inset-0 h-full w-full rounded-t-2xl object-cover object-center"
         />
-        
       </figure>
-      <h4 class="text-center mt-3 text-normal text-white">PATROL SERVICES</h4>
+      <h4 class="text-normal mt-3 pb-2 text-center font-bold text-dark-900">
+        PATROL SERVICES
+      </h4>
     </div>
-    <div class="flex flex-col">
-      <figure class="w-40s relative h-56">
+    <div class="flex flex-col rounded-2xl bg-white">
+      <figure class="w-40s relative h-56 rounded-2xl">
         <Image
           src={Alarm}
           alt="description"
-          class="absolute inset-0 h-full w-full object-cover object-center"
+          class="absolute inset-0 h-full w-full rounded-t-2xl object-cover object-center"
         />
-        
       </figure>
-      <h4 class="text-center mt-3 text-normal text-white">ALARM RESPONSE</h4>
+      <h4 class="text-normal mt-3 pb-2 text-center font-bold text-dark-900">
+        ALARM RESPONSE
+      </h4>
     </div>
   </div>
   {/* Second Row */}
   <div
-    class="mx-auto grid max-w-screen-md grid-cols-4 gap-8 lg:max-w-screen-xl mb-4 fade-in-anim"
+    class="fade-in-anim mx-auto mb-4 grid max-w-screen-md grid-cols-4 gap-8 lg:max-w-screen-xl"
   >
-    <div class="flex flex-col">
-      <figure class="w-40s relative h-56">
+    <div class="flex flex-col rounded-2xl bg-white">
+      <figure class="w-40s relative h-56 rounded-2xl">
         <Image
           src={Executive}
           alt="description"
-          class="absolute inset-0 h-full w-full object-cover object-center"
+          class="absolute inset-0 h-full w-full rounded-t-2xl object-cover object-center"
         />
-        
       </figure>
-      <h4 class="text-center mt-3 text-normal text-white">EXECUTIVE PROTECTION</h4>
+      <h4 class="text-normal mt-3 pb-2 text-center font-bold text-dark-900">
+        EXECUTIVE PROTECTION
+      </h4>
     </div>
-    <div class="flex flex-col">
-      <figure class="w-40s relative h-56">
+    <div class="flex flex-col rounded-2xl bg-white">
+      <figure class="w-40s relative h-56 rounded-2xl">
         <Image
           src={K9}
           alt="description"
-          class="absolute inset-0 h-full w-full object-cover object-center"
+          class="absolute inset-0 h-full w-full rounded-t-2xl object-cover object-center"
         />
-        
       </figure>
-      <h4 class="text-center mt-3 text-normal text-white">K-9 UNIT</h4>
+      <h4 class="text-normal mt-3 pb-2 text-center font-bold text-dark-900">
+        K-9 UNIT
+      </h4>
     </div>
-    <div class="flex flex-col">
-      <figure class="w-40s relative h-56">
+    <div class="flex flex-col rounded-2xl bg-white">
+      <figure class="w-40s relative h-56 rounded-2xl">
         <Image
           src={Plain}
           alt="description"
-          class="absolute inset-0 h-full w-full object-cover object-center"
+          class="absolute inset-0 h-full w-full rounded-t-2xl object-cover object-center"
         />
-        
       </figure>
-      <h4 class="text-center mt-3 text-normal text-white">PLAINCLOTHES/UNDERCOVER STAFF</h4>
+      <h4 class="text-normal mt-3 pb-2 text-center font-bold text-dark-900">
+        PLAINCLOTHES/UNDERCOVER STAFF
+      </h4>
     </div>
-    <div class="flex flex-col">
-      <figure class="w-40s relative h-56">
+    <div class="flex flex-col rounded-2xl bg-white">
+      <figure class="w-40s relative h-56 rounded-2xl">
         <Image
           src={Security}
           alt="description"
-          class="absolute inset-0 h-full w-full object-cover object-center"
+          class="absolute inset-0 h-full w-full rounded-t-2xl object-cover object-center"
         />
-        
       </figure>
-      <h4 class="text-center mt-3 text-normal text-white">SECURITY AND OTHER SPECIALIZED CONSULTATIONS</h4>
+      <h4 class="text-normal mt-3 pb-2 text-center font-bold text-dark-900">
+        SECURITY AND OTHER SPECIALIZED CONSULTATIONS
+      </h4>
     </div>
   </div>
   {/* Thirth Row */}
   <div
-    class="mx-auto grid max-w-screen-md grid-cols-4 gap-8 lg:max-w-screen-xl fade-in-anim"
+    class="fade-in-anim mx-auto grid max-w-screen-md grid-cols-4 gap-8 lg:max-w-screen-xl pb-16"
   >
-    <div class="flex flex-col">
-      <figure class="w-40s relative h-56">
+    <div class="flex flex-col rounded-2xl bg-white">
+      <figure class="w-40s relative h-56 rounded-2xl">
         <Image
           src={Investigative}
           alt="description"
-          class="absolute inset-0 h-full w-full object-cover object-center"
+          class="absolute inset-0 h-full w-full rounded-t-2xl object-cover object-center"
         />
-        
       </figure>
-      <h4 class="text-center mt-3 text-normal text-white">INVESTIGATIVE SERVICES</h4>
+      <h4 class="text-normal mt-3 pb-2 text-center font-bold text-dark-900">
+        INVESTIGATIVE SERVICES
+      </h4>
     </div>
-    <div class="flex flex-col">
-      <figure class="w-40s relative h-56">
+    <div class="flex flex-col rounded-2xl bg-white">
+      <figure class="w-40s relative h-56 rounded-2xl">
         <Image
           src={Staffing}
           alt="description"
-          class="absolute inset-0 h-full w-full object-cover object-center"
+          class="absolute inset-0 h-full w-full rounded-t-2xl object-cover object-center"
         />
-        
       </figure>
-      <h4 class="text-center mt-3 text-normal text-white">STAFFING FOR SPECIAL EVENTS</h4>
+      <h4 class="text-normal mt-3 pb-2 text-center font-bold text-dark-900">
+        STAFFING FOR SPECIAL EVENTS
+      </h4>
     </div>
-    <div class="flex flex-col">
-      <figure class="w-40s relative h-56">
+    <div class="flex flex-col rounded-2xl bg-white">
+      <figure class="w-40s relative h-56 rounded-2xl">
         <Image
           src={Dispatchers}
           alt="description"
-          class="absolute inset-0 h-full w-full object-cover object-center"
+          class="absolute inset-0 h-full w-full rounded-t-2xl object-cover object-center"
         />
-        
       </figure>
-      <h4 class="text-center mt-3 text-normal text-white">DISPATCHERS & COMMUNICATION SPACIALISTS</h4>
+      <h4 class="text-normal mt-3 pb-2 text-center font-bold text-dark-900">
+        DISPATCHERS & COMMUNICATION SPACIALISTS
+      </h4>
     </div>
-    <div class="flex flex-col">
-      <figure class="w-40s relative h-56">
+    <div class="flex flex-col rounded-2xl bg-white">
+      <figure class="w-40s relative h-56 rounded-2xl">
         <Image
           src={Entertainment}
           alt="description"
-          class="absolute inset-0 h-full w-full object-cover object-center"
+          class="absolute inset-0 h-full w-full rounded-t-2xl object-cover object-center"
         />
-        
       </figure>
-      <h4 class="text-center mt-3 text-normal text-white">ENTERTEINMENT VENUES</h4>
+      <h4 class="text-normal mt-3 pb-2 text-center font-bold text-dark-900">
+        ENTERTEINMENT VENUES
+      </h4>
     </div>
   </div>
 </section>
 
-
 <style>
-
   .fade-in-anim-left {
     view-timeline: --subjectReveal block;
     animation-timeline: --subjectReveal;
-  
+
     animation-name: fadein-left;
     animation-fill-mode: both;
     animation-duration: 1ms; /* Firefox requires this to apply the animation */
-    animation-range: entry 25% cover 50% ;
+    animation-range: entry 25% cover 50%;
   }
 
   .fade-in-anim-right {
     view-timeline: --subjectReveal block;
     animation-timeline: --subjectReveal;
-  
+
     animation-name: fadein-right;
     animation-fill-mode: both;
     animation-duration: 1ms; /* Firefox requires this to apply the animation */
-    animation-range: entry 25% cover 50% ;
+    animation-range: entry 25% cover 50%;
   }
 
   .fade-in-anim-center {
     view-timeline: --subjectReveal block;
     animation-timeline: --subjectReveal;
-  
+
     animation-name: fadein-center;
     animation-fill-mode: both;
     animation-duration: 1ms; /* Firefox requires this to apply the animation */
-    animation-range: entry 25% cover 50% ;
+    animation-range: entry 25% cover 50%;
   }
   .fade-in-anim {
     view-timeline: --subjectReveal block;
     animation-timeline: --subjectReveal;
-  
+
     animation-name: fadein;
     animation-fill-mode: both;
     animation-duration: 1ms; /* Firefox requires this to apply the animation */
-    animation-range: entry 25% cover 50% ;
+    animation-range: entry 25% cover 50%;
   }
-  
+
   @keyframes fadein-left {
-  from {
-    opacity: 0;
-    transform: translateX(-40px);
+    from {
+      opacity: 0;
+      transform: translateX(-40px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
   }
 
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
+  @keyframes fadein-right {
+    from {
+      opacity: 0;
+      transform: translateX(40px);
+    }
 
-@keyframes fadein-right {
-  from {
-    opacity: 0;
-    transform: translateX(40px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes fadein-center {
-  from {
-    opacity: 0;
-    transform: translateY(40px);
-    
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
   }
 
-  to {
-    opacity: 1;
-    transform: translateY(0);
-    
+  @keyframes fadein-center {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
-}
 
-@keyframes fadein {
-  from {
-    opacity: 0;
-    transform: scale(0.5);
+  @keyframes fadein {
+    from {
+      opacity: 0;
+      transform: scale(0.5);
+    }
+
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
   }
-
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-
-  
-  </style>
+</style>

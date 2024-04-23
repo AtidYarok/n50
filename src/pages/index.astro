@@ -10,6 +10,7 @@ import HomeLayout from '@layouts/HomeLayout.astro'
 import ServicesListBlue from '@components/home/ServicesListBlue.astro'
 
 import video2 from '@video/MainSlideShow_4.mp4'
+import video3 from '@video/MainSlideShow_1.mp4'
 
 import bgImage1 from '@images/stock/bgImg1.jpg'
 import bgImage2 from '@images/stock/light-bg.png'
@@ -214,27 +215,36 @@ import commandBg from '@images/stock/commandBg.png'
     </div>
   </section>
 
-
-
   <ServicesList />
   <ServicesListBlue />
 
     {/* White Section- National 50 security ans investigations inc*/}
-    <section class="bg-white px-4 py-12 sm:px-6 md:py-16 lg:px-8">
-      <div class="mx-auto max-w-screen-md lg:max-w-screen-xl">
-        <div class="flex w-full justify-center">
-          <h1 class="text-3xl font-bold text-dark-900">NATIONAL 50 SECURITY AND INVESTIGATIONS INC.</h1>
-        </div>
-        {/* Project description */}
-        <div class="mx-auto mt-6 flex w-full flex-wrap">
-          <div class="mx-auto w-full">
-            <p
-              class="mb-6 text-2xl font-normal tracking-tight text-dark-900 lg:leading-tight"
-            >
-            PROVIDES SUPERVISION OF SECURITY OFFICERS AT NO ADDITIONAL COST TO YOU. WE SHALL DESIGNATE SUPERVISORY PERSONNEL THAT WILL BE IDENTIFIED TO EACH CLIENT AND AVAILABLE TO THE CLIENT ANYTIME SECURITY SERVICES ARE PROVIDED AND ARE RESPONSIBLE FOR REPORTING AND CONFERRING WITH REPRESENTATIVES OF THE CLIENT WITH RESPECT TO THE SERVICES RENDERED. OUR CLIENTS CAN CONTACT SUPERVISORY PERSONNEL AT ANY TIME, 24 HOURS A DAY.
-            </p>
+    <section class="hero relative flex items-center justify-center overflow-hidden py-40">
+      <video
+      autoplay
+      loop
+      muted
+      class="absolute w-auto min-w-full min-h-full max-w-none"
+    >
+      <source
+        src={video3}
+        type="video/mp4"
+      />
+      Your browser does not support the video tag.
+    </video>
+    <div class="mx-auto w-full justify-center z-10">
+      <div class="py-8 z-10">
+        <div class="mx-auto w-full max-w-4xl bg-white/70 rounded-3xl p-8">
+          <h1 class="text-3xl font-bold text-dark-900 text-center mb-2 drop-shadow-lg">NATIONAL 50 SECURITY AND INVESTIGATIONS INC.</h1>
+          <p
+            class="text-1xl mb-6 text-justify font-normal tracking-tight text-dark-900 drop-shadow-lg lg:leading-tight"
+          >
+          PROVIDES SUPERVISION OF SECURITY OFFICERS AT NO ADDITIONAL COST TO YOU. WE SHALL DESIGNATE SUPERVISORY PERSONNEL THAT WILL BE IDENTIFIED TO EACH CLIENT AND AVAILABLE TO THE CLIENT ANYTIME SECURITY SERVICES ARE PROVIDED AND ARE RESPONSIBLE FOR REPORTING AND CONFERRING WITH REPRESENTATIVES OF THE CLIENT WITH RESPECT TO THE SERVICES RENDERED. OUR CLIENTS CAN CONTACT SUPERVISORY PERSONNEL AT ANY TIME, 24 HOURS A DAY.
+          </p>
         </div>
       </div>
+    </div>
+      
     </section>
   
 
