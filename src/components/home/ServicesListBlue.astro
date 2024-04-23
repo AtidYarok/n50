@@ -16,22 +16,18 @@ import Investigative from '@images/stock/InvestigativeServices.png'
 import Staffing from '@images/stock/special.jpg'
 import Entertainment from '@images/stock/services/locations.jpg'
 import Dispatchers from '@images/stock/dispatcher.jpg'
-import herobg from '@images/stock/hero-bg.jpg'
-
-import video2 from '@video/Scene_01.mp4'
+import bgImage from '@images/stock/bgImg2.jpg'
 ---
 
 <section class="relative bg-dark-900">
-  <video
-    autoplay
-    loop
-    muted
-    class="absolute min-h-full w-auto min-w-full max-w-none"
-  >
-    <source src={video2} type="video/mp4" />
-     Your browser does not support the video tag.
-  </video>
-  <div class="py-16">
+  <div class="bg-black/50 absolute w-full h-full z-[2]"></div>
+  <Image
+    src={bgImage}
+    alt="description"
+    class="fade-in-anim-left absolute inset-0 h-full w-full object-cover object-center"
+  />
+
+  <div class="relative py-16 z-[3]">
     <h3 class="mb-2 text-center text-2xl font-bold text-white drop-shadow-lg">
       IN ADDITION TO OFFERING ARMED AND UNARMED SECURITY OFFICERS, NATIONAL 50
       SECURITY ANS INVESTIGATIONS, INC. <br />
@@ -40,7 +36,7 @@ import video2 from '@video/Scene_01.mp4'
   </div>
   {/* First Row */}
   <div
-    class="fade-in-anim mx-auto mb-8 grid max-w-screen-md grid-cols-4 gap-8 lg:max-w-screen-xl"
+    class="relative fade-in-anim mx-auto mb-8 grid max-w-screen-md grid-cols-4 gap-8 lg:max-w-screen-xl z-[3]"
   >
     <div class="flex flex-col rounded-2xl bg-white">
       <figure class="w-40s relative h-56 rounded-2xl">
@@ -93,7 +89,7 @@ import video2 from '@video/Scene_01.mp4'
   </div>
   {/* Second Row */}
   <div
-    class="fade-in-anim mx-auto mb-4 grid max-w-screen-md grid-cols-4 gap-8 lg:max-w-screen-xl"
+    class="relative fade-in-anim mx-auto mb-4 grid max-w-screen-md grid-cols-4 gap-8 lg:max-w-screen-xl z-[3]"
   >
     <div class="flex flex-col rounded-2xl bg-white">
       <figure class="w-40s relative h-56 rounded-2xl">
@@ -146,7 +142,7 @@ import video2 from '@video/Scene_01.mp4'
   </div>
   {/* Thirth Row */}
   <div
-    class="fade-in-anim mx-auto grid max-w-screen-md grid-cols-4 gap-8 lg:max-w-screen-xl pb-16"
+    class="relative fade-in-anim mx-auto grid max-w-screen-md grid-cols-4 gap-8 pb-16 lg:max-w-screen-xl z-[3]"
   >
     <div class="flex flex-col rounded-2xl bg-white">
       <figure class="w-40s relative h-56 rounded-2xl">
