@@ -12,7 +12,7 @@ const navbar = {
     { label: 'SERVICES', href: '/services' },
   ],
   action: {
-    label: "Let's talk",
+    label: "CONTACT US",
     href: '/contact',
   },
 }
@@ -23,7 +23,7 @@ const pathname = Astro.url.pathname.replace(/(?<=.)\/$/, '')
 
 <header class="bg-white z-10">
   <!--Header-Upper-->
-  <div class="mx-auto flex max-w-7xl items-center px-4 py-6 sm:px-6 lg:px-8">
+  <div class="mx-auto flex max-w-7xl items-center px-4 pt-6 sm:px-6 lg:px-8">
       <div class="flex w-full items-center justify-around">
         <div class="flex items-center">
           <a href="/" class="group text-2xl font-black lg:block">
@@ -40,7 +40,7 @@ const pathname = Astro.url.pathname.replace(/(?<=.)\/$/, '')
         <div class="flex">
 
           <div class="flex">
-            <Icon name="calendar" class="mr-2 h-7 w-7 text-amber-300" />
+            <Icon name="calendar" class="mr-2 h-7 w-7 text-red-400" />
             <div>
              <h3>WORKING HOURS</h3> 
              <h5 class="light-text">
@@ -50,7 +50,7 @@ const pathname = Astro.url.pathname.replace(/(?<=.)\/$/, '')
           </div>
 
           <div class="flex">
-            <Icon name="phone" class="mr-2 h-7 w-7 text-amber-300" />
+            <Icon name="phone" class="mx-2 h-7 w-7 text-red-400" />
             <div>
              <h3>TEL. 310-838-2329</h3> 
              <h5 class="light-text">
@@ -60,7 +60,7 @@ const pathname = Astro.url.pathname.replace(/(?<=.)\/$/, '')
           </div>
 
           <div class="flex">
-            <Icon name="checks" class="mr-2 h-7 w-7 text-amber-300" />
+            <Icon name="checks" class="mx-2 h-7 w-7 text-red-400" />
             <div>
              <h3>MAIL US</h3> 
              <h5 class="light-text">
@@ -86,8 +86,8 @@ const pathname = Astro.url.pathname.replace(/(?<=.)\/$/, '')
               class:list={[
                 'block px-4 py-1 sm:inline-block',
                 pathname === link.href
-                  ? 'border-t-amber-300 border-t-2'
-                  : 'duration-200 ease-in-out hover:border-t-amber-300 hover:border-t-2',
+                  ? 'border-t-red-400 border-t-2'
+                  : 'duration-200 ease-in-out hover:border-t-red-400 hover:border-t-2',
               ]}
             >
               {link.label}
@@ -101,7 +101,7 @@ const pathname = Astro.url.pathname.replace(/(?<=.)\/$/, '')
       <div class="hidden md:block">
         {
           (
-            <PrimaryButton href={navbar.action.href} class="hover:bg-dark-700">
+            <PrimaryButton href={navbar.action.href} class="bg-red-500 hover:transform-x-1">
               {navbar.action.label}
             </PrimaryButton>
           )

@@ -1,5 +1,5 @@
 ---
-
+import { Image } from 'astro:assets'
 import HomeHero from '@components/home/HomeHero.astro'
 
 import ContactForm from '@components/shared/ContactForm.astro'
@@ -8,6 +8,10 @@ import ServicesList from '@components/home/ServicesList.astro'
 import { SITE } from '@config'
 import HomeLayout from '@layouts/HomeLayout.astro'
 import ServicesListBlue from '@components/home/ServicesListBlue.astro'
+
+import bgImage1 from '@images/stock/bgImg1.jpg'
+import bgImage2 from '@images/stock/light-bg.png'
+import bgImage3 from '@images/stock/InvestigativeServices.png'
 ---
 
 <HomeLayout
@@ -15,75 +19,79 @@ import ServicesListBlue from '@components/home/ServicesListBlue.astro'
 >
   <HomeHero />
   <ContactForm />
-  {/* Blue Section Mission Statement*/}
-  <section class="bg-dark-900 px-4 py-12 sm:px-6 md:py-16 lg:px-8">
-    <div class="mx-auto max-w-screen-md lg:max-w-screen-xl">
-      <div class="flex w-full justify-center">
-        <h1 class="text-3xl font-bold text-white">MISSION STATEMENTS</h1>
-      </div>
-      {/* Project description */}
-      <div class="mx-auto mt-6 flex w-full flex-wrap">
-        <div class="mx-auto w-full">
-          <p
-            class="mb-6 text-2xl font-normal tracking-tight text-white lg:leading-tight"
+
+
+{/* Blue Section Mission Statement - animated */}
+  <section class="bg-dark-900 pb-10  md:pb-12 ">
+    <div class="mx-auto w-full max-w-screen-xl mt-12 space-y-12 lg:mt-16 lg:space-y-56 lg:pb-24">
+          <div
+            class="relative mx-auto max-w-lg lg:mx-0 lg:max-w-none"
           >
-            National 50 Security and Investigations Inc. is a dominant provider
+            <div
+              class='left-40 relative h-64 w-full rounded-t-3xl bg-cover bg-center shadow-xl lg:h-full lg:w-[90%] lg:rounded-3xl lg:pt-[46%] fade-in-anim-right'
+            >
+              <Image
+                src={bgImage1}
+                alt='descript'
+                class="absolute inset-0 h-full w-full rounded-t-3xl object-cover object-center lg:rounded-3xl"
+              /> 
+              
+            </div>
+            <div
+              class:list={[
+                'relative bottom-0 z-20 block h-auto w-full rounded-b-3xl bg-white p-6 shadow-xl sm:p-8 lg:absolute lg:-bottom-25 lg:h-full lg:w-1/2 lg:rounded-3xl lg:p-12 fade-in-anim-left',
+              ]}
+            >
+              <div class="h-full lg:flex lg:flex-col lg:justify-between">
+                <div class="flex w-full flex-wrap">
+                  <h3 class="text-3xl font-bold text-dark-900 lg:text-4xl">
+                    Mission Statement
+                  </h3>
+                  <p class="mt-2 text-base text-dark-900 md:text-lg lg:mt-4">
+                    National 50 Security and Investigations Inc. is a dominant provider
             of a wide array of security and safety services in each of the
             markets in which we compete.
-          </p>
-          <p
-            class="mb-6 text-2xl font-normal tracking-tight text-white lg:leading-tight"
-          >
-            All Security Officers are trained by the State to “Protect the
+                  </p>
+                  <p class="mt-2 text-base text-dark-900 md:text-lg lg:mt-4">
+                    All Security Officers are trained by the State to “Protect the
             Clients” and their “Property”. With National 50 Security, its not
             just a sales slogan, we do what we promise.
-          </p>
-          <p
-            class="mb-6 text-2xl font-normal tracking-tight text-white lg:leading-tight"
-          >
-            We pledge to do our very best to build and strengthen the
+                  </p>
+                  <p class="mt-2 text-base text-dark-900 md:text-lg lg:mt-4">
+                    We pledge to do our very best to build and strengthen the
             partnerships which our business is based:
-          </p>
-          <p
-            class="mb-6 text-2xl font-normal tracking-tight text-white lg:leading-tight"
-          >
-            - Partnerships with our customers, whose loyalty has brought
-            longevity and success.
-          </p>
-          <p
-            class="mb-6 text-2xl font-normal tracking-tight text-white lg:leading-tight"
-          >
-            - Partnerships with our employees, whose dedication has built the
-            company.
-          </p>
-          <p
-            class="mb-6 text-2xl font-normal tracking-tight text-white lg:leading-tight"
-          >
-            - Belief in secure communities
-          </p>
-          <p
-            class="mb-6 text-2xl font-normal tracking-tight text-white lg:leading-tight"
-          >
-            For more information, please contact one of our knowledgeable staff
+                  </p>
+                  <p class="mt-2 text-base text-dark-900 md:text-lg lg:mt-4">
+                    - Partnerships with our customers, whose loyalty has brought
+            longevity and success. <br>
+                    - Partnerships with our employees, whose dedication has built the
+            company. <br>
+                    - Belief in secure communities
+                  </p>
+                  <p class="mt-2 text-base text-dark-900 md:text-lg lg:mt-4">
+                    For more information, please contact one of our knowledgeable staff
             members listed on the contact page within this website. We look
             forward to working with you!
-          </p>
-        </div>
-      </div>
+                  </p>
+                </div>            
+              </div>
+            </div>
+          </div>
     </div>
-  </section>
+    </section>
 
   {/* White Section- Investigative*/}
-  <section class="bg-white px-4 py-12 sm:px-6 md:py-16 lg:px-8">
-    <div class="mx-auto max-w-screen-md lg:max-w-screen-xl">
+  <section class="bg-white px-4 sm:px-6 md:py-40 lg:px-8 ">
+      
+    <div class="mx-auto max-w-screen-md lg:max-w-screen-xl ">
       <div class="flex w-full justify-center">
-        <h1 class="text-3xl font-bold text-dark-900">INVESTIGATIVE SERVICES</h1>
+        <h1 class="mb-16 text-3xl font-bold text-dark-900 fade-in-anim-center ">INVESTIGATIVE SERVICES</h1>
       </div>
       {/* Project description */}
-      <div class="mx-auto mt-6 flex w-full flex-wrap">
-        <div class="mx-auto w-full">
+      <div class="mx-auto mt-6 w-full flex-wrap grid grid-cols-3">
+        <div class="mx-auto w-full col-span-2 pr-8 ">
           <p
-            class="mb-6 text-2xl font-normal tracking-tight text-dark-900 lg:leading-tight"
+            class="mb-6 text-xl font-normal tracking-tight text-dark-900 lg:leading-tight fade-in-anim-center"
           >
             National 50 Security office is staffed with professional state
             licensed investigators. All of our investigators have prior law
@@ -92,7 +100,7 @@ import ServicesListBlue from '@components/home/ServicesListBlue.astro'
             case budget.
           </p>
           <p
-            class="mb-6 text-2xl font-normal tracking-tight text-dark-900 lg:leading-tight"
+            class=" mb-6 text-xl font-normal tracking-tight text-dark-900 lg:leading-tight fade-in-anim-center"
           >
             Our investigative assignments are civil only. We refrain from
             becoming involved in criminal matters. From civil cases to personal
@@ -101,11 +109,20 @@ import ServicesListBlue from '@components/home/ServicesListBlue.astro'
             the expenses that a client may incur.
           </p>
           <p
-            class="mb-6 text-2xl font-normal tracking-tight text-dark-900 lg:leading-tight"
+            class="mb-6 text-xl font-normal tracking-tight text-dark-900 lg:leading-tight fade-in-anim-center"
           >
             As in any work we perform, we are fully licensed and insured.
           </p>
         </div>
+        <div
+        class="relative h-64 w-full rounded-t-3xl bg-cover bg-center shadow-xl lg:h-full fade-in-anim-center">
+        <Image
+          src={bgImage3}
+          alt="descrip"
+          class="absolute inset-0 h-full w-full rounded-t-3xl object-cover object-center lg:rounded-3xl"
+        />
+        
+      </div>
       </div>
     </div>
   </section>
@@ -196,3 +213,99 @@ import ServicesListBlue from '@components/home/ServicesListBlue.astro'
 
 </HomeLayout>
 
+
+
+<style>
+
+  .fade-in-anim-left {
+    view-timeline: --subjectReveal block;
+    animation-timeline: --subjectReveal;
+  
+    animation-name: fadein-left;
+    animation-fill-mode: both;
+    animation-duration: 1ms; /* Firefox requires this to apply the animation */
+    animation-range: entry 25% cover 50% ;
+  }
+
+  .fade-in-anim-right {
+    view-timeline: --subjectReveal block;
+    animation-timeline: --subjectReveal;
+  
+    animation-name: fadein-right;
+    animation-fill-mode: both;
+    animation-duration: 1ms; /* Firefox requires this to apply the animation */
+    animation-range: entry 25% cover 50% ;
+  }
+
+  .fade-in-anim-center {
+    view-timeline: --subjectReveal block;
+    animation-timeline: --subjectReveal;
+  
+    animation-name: fadein-center;
+    animation-fill-mode: both;
+    animation-duration: 1ms; /* Firefox requires this to apply the animation */
+    animation-range: entry 15% cover 60% ;
+  }
+  .fade-in-anim {
+    view-timeline: --subjectReveal block;
+    animation-timeline: --subjectReveal;
+  
+    animation-name: fadein;
+    animation-fill-mode: both;
+    animation-duration: 1ms; /* Firefox requires this to apply the animation */
+    animation-range: entry 25% cover 50% ;
+  }
+  
+  @keyframes fadein-left {
+  from {
+    opacity: 0;
+    transform: translateX(-300px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadein-right {
+  from {
+    opacity: 0;
+    transform: translateX(300px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadein-center {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+    
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+  
+  </style>
