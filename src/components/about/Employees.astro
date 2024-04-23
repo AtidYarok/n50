@@ -1,9 +1,9 @@
 ---
 import { Image } from 'astro:assets'
 
-import staffImage1 from '@images/stock/team/team-01.jpg'
-import staffImage2 from '@images/stock/team/team-01.jpg'
-import staffImage3 from '@images/stock/team/team-01.jpg'
+import staffImage1 from '@images/stock/ourEmployees.png'
+import staffImage2 from '@images/stock/ourEmployees2.png'
+import staffImage3 from '@images/stock/ourEmployees3.png'
 
 const t1 =
   'We invest considerable time and expense in our most important asset, our security personnel. Our pre-employment process is extensive. Verification of state issued permits, and a thorough background check with criminal and civil index checks as well as interviews with former employers are performed. Upon passing our stringent screening process, new staff members are required to undergo advanced training in all areas related to, or specific to, their assigned duties to ensure smooth communications and client satisfaction. Additional training is provided by legal experts and Law Enforcement Trainers in the field of civil and criminal laws.'
@@ -24,27 +24,21 @@ const t3 =
     <div class="grid grid-cols-3 place-content-center my-8">
       <div class="m-auto">
         <Image
-          src='https://html.tonatheme.com/wp/bristol/wp-content/uploads/2023/06/guard-1.jpg'
-          width= {350}
-          height={450}
+          src={staffImage1}
           alt='Our Employees'
           class="h-auto rounded-3xl object-cover object-center shadow-xl"
         />
       </div>
       <div class="m-auto">
         <Image
-          src='https://html.tonatheme.com/wp/bristol/wp-content/uploads/2023/06/guard-2.png'
-          width= {350}
-          height={450}
+          src={staffImage2}
           alt='Our Employees'
           class="h-auto rounded-3xl object-cover object-center shadow-xl"
         />
       </div>
       <div class="m-auto">
         <Image
-          src='https://html.tonatheme.com/wp/bristol/wp-content/uploads/2023/06/guard-3.jpg'
-          width= {350}
-          height={450}
+          src={staffImage3}
           alt='Our Employees'
           class="h-auto rounded-3xl object-cover object-center shadow-xl"
         />
@@ -56,17 +50,17 @@ const t3 =
         <p
           class="mb-6 text-2xl font-normal tracking-tight text-dark-900 lg:leading-tight"
         >
-          {t1.toUpperCase()}
+          {t1}
         </p>
         <p
           class="mb-6 text-2xl font-normal tracking-tight text-dark-900 lg:leading-tight"
         >
-          {t2.toUpperCase()}
+          {t2}
         </p>
         <p
           class="mb-6 text-2xl font-normal tracking-tight text-dark-900 lg:leading-tight"
         >
-          {t3.toUpperCase()}
+          {t3}
         </p>
       </div>
     </div>
