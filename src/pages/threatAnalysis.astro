@@ -1,0 +1,16 @@
+---
+import Layout from '@layouts/Layout.astro'
+import ServicesList from '@components/services/ServicesList.astro'
+import Threat from '@components/services/Threat.astro'
+
+import { SITE } from '@config'
+---
+
+<Layout
+  title={`Investigative Services - ${SITE.title}`}
+  description="Discover a diverse range of security services meticulously designed to meet your unique requirements. "
+>
+
+<Threat />
+<ServicesList />
+</Layout>

@@ -1,0 +1,17 @@
+---
+import Layout from '@layouts/Layout.astro'
+import Electronic from '@components/services/Electronic.astro'
+import ServicesList from '@components/services/ServicesList.astro'
+
+import { SITE } from '@config'
+
+---
+
+<Layout
+  title={`Electronic Tracking § Reporting - ${SITE.title}`}
+  description="Discover a diverse range of security services meticulously designed to meet your unique requirements. "
+>
+
+<Electronic />
+<ServicesList />
+</Layout>

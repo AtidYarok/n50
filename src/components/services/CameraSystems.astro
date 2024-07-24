@@ -1,0 +1,31 @@
+---
+import Layout from '@layouts/Layout.astro'
+import ServicesHero from '@components/services/ServicesHero.astro'
+import SimpleFeaturesAlternating from '@components/services/SimpleFeaturesAlternating.astro'
+import ServicesList from '@components/services/ServicesList.astro'
+import Specialized from '@components/services/Specialized.astro'
+import NoCost from '@components/services/NoCost.astro'
+import FeaturedWork from '@components/work/FeaturedWork.astro'
+import FeaturesWithList from '@components/services/FeaturesWithList.astro'
+import Process from '@components/shared/Process.astro'
+import CallToAction from '@components/shared/CallToAction.astro'
+import { SITE } from '@config'
+import ServicesListBlue from '@components/home/ServicesListBlue.astro'
+import Mobile from '@components/services/Mobile.astro'
+import Paramedic from '@components/services/Paramedic.astro'
+import Locations from '@components/services/Locations.astro'
+import Testimonials from '@components/shared/Testimonials.astro'
+import CaseStudyStats from '@components/work/CaseStudyStats.astro'
+import CaseStudyFeatures from '@components/work/CaseStudyFeatures.astro'
+import CaseStudyHero from '@components/work/CaseStudyHero.astro'
+import InvestigativeServices from '@components/services/InvestigativeServices.astro'
+---
+
+<Layout
+  title={`Investigative Services - ${SITE.title}`}
+  description="Discover a diverse range of security services meticulously designed to meet your unique requirements. "
+>
+
+<InvestigativeServices />
+<ServicesList />
+</Layout>

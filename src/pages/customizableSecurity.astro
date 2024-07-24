@@ -1,0 +1,16 @@
+---
+import Layout from '@layouts/Layout.astro'
+import Customizable from '@components/services/Customizable.astro'
+import ServicesList from '@components/services/ServicesList.astro'
+import { SITE } from '@config'
+
+---
+
+<Layout
+  title={`Customizable Security Solutions - ${SITE.title}`}
+  description="Discover a diverse range of security services meticulously designed to meet your unique requirements. "
+>
+
+<Customizable />
+<ServicesList />
+</Layout>
