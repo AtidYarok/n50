@@ -1,16 +1,17 @@
 ---
 import Layout from '@layouts/Layout.astro'
 import ServicesList from '@components/services/ServicesList.astro'
-import MobileP from '@components/services/MobileP.astro'
-
 import { SITE } from '@config'
+import Camera from '@components/services/Camera.astro'
+
+
 ---
 
 <Layout
-  title={`Mobile Security Patrol Units - ${SITE.title}`}
+  title={`Customizable Security Solutions - ${SITE.title}`}
   description="Discover a diverse range of security services meticulously designed to meet your unique requirements. "
 >
 
-<MobileP />
+<Camera />
 <ServicesList />
 </Layout>
