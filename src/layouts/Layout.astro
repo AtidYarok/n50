@@ -2,7 +2,7 @@
 import '@fontsource-variable/inter'
 import Navbar from '@components/shared/Navbar.astro'
 import Footer from '@components/shared/Footer.astro'
-import { SITE } from '@config'
+import { CONTACT, SITE, SOCIALS } from '@config'
 import { ViewTransitions } from 'astro:transitions'
 
 interface Props {
@@ -22,10 +22,41 @@ const {
     .href,
 } = Astro.props
 
-const socialImageURL = new URL(ogImage ?? SITE.ogImage, Astro.url.origin).href
+const socialImageURL = new URL(ogImage ?? SITE.ogImage, Astro.site).href
+const organizationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'SecurityService',
+  name: SITE.title,
+  url: SITE.website,
+  logo: new URL(SITE.ogImage, Astro.site).href,
+  description: SITE.description,
+  email: CONTACT.email,
+  telephone: CONTACT.phone,
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: CONTACT.address.street,
+    addressLocality: CONTACT.address.city,
+    addressRegion: CONTACT.address.state,
+    postalCode: CONTACT.address.zip,
+    addressCountry: 'US',
+  },
+  sameAs: SOCIALS.map((social) => social.href).filter((href) => href.startsWith('http')),
+}
+const webPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: title,
+  description,
+  url: canonicalURL,
+  isPartOf: {
+    '@type': 'WebSite',
+    name: SITE.title,
+    url: SITE.website,
+  },
+}
 ---
 
-<html lang="en">
+<html lang="en-US">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -38,20 +69,27 @@ const socialImageURL = new URL(ogImage ?? SITE.ogImage, Astro.url.origin).href
     <meta name="title" content={title} />
     <meta name="description" content={description} />
     <meta name="author" content={author} />
-    <link rel="sitemap" href="/sitemap-index.xml" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <link rel="sitemap" href={new URL('/sitemap-index.xml', Astro.site).href} />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={SITE.title} />
+    <meta property="og:locale" content="en_US" />
     <meta property="og:url" content={canonicalURL} />
     <meta property="og:image" content={socialImageURL} />
 
     <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content={canonicalURL} />
-    <meta property="twitter:title" content={title} />
-    <meta property="twitter:description" content={description} />
-    <meta property="twitter:image" content={socialImageURL} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content={canonicalURL} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={socialImageURL} />
+
+    <script type="application/ld+json" set:html={JSON.stringify(organizationSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(webPageSchema)} />
 
     <ViewTransitions />
   </head>

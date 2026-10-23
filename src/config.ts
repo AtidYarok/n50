@@ -1,10 +1,10 @@
 import type { Site, Contact, SocialObjects } from './types'
 
 export const SITE: Site = {
-  website: 'https://national50.com', // replace this with your deployed domain
+  website: 'https://national50.com',
   author: 'Atid Yarok',
   description:
-    "Crator is a digital agency with a focus on creative, interactive and innovative design and development. Our team of designers, developers and strategists work together to create customized solutions that are unique to each client's needs.",
+    'National 50 Security provides professional security, patrol, investigative, and safety services for businesses and communities in Southern California.',
   title: 'National 50',
   ogImage: 'weblogo.png',
 }
