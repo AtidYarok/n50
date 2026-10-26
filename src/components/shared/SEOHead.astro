@@ -20,8 +20,10 @@ const {
 const socialImageURL = new URL(ogImage, SITE.website).href
 const organizationSchema = {
   '@context': 'https://schema.org',
-  '@type': 'ProfessionalService',
+  '@type': ['ProfessionalService', 'SecurityService'],
+  '@id': `${SITE.website}/#organization`,
   name: 'National 50 Security and Investigations Inc.',
+  alternateName: ['National 50', 'National50'],
   url: SITE.website,
   logo: new URL('/weblogo.png', SITE.website).href,
   description: SITE.description,
@@ -34,6 +36,32 @@ const organizationSchema = {
     addressRegion: CONTACT.address.state,
     postalCode: CONTACT.address.zip,
     addressCountry: 'US',
+  },
+  areaServed: {
+    '@type': 'City',
+    name: CONTACT.address.city,
+    address: {
+      '@type': 'PostalAddress',
+      addressRegion: CONTACT.address.state,
+      addressCountry: 'US',
+    },
+  },
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'Security and investigation services',
+    itemListElement: [
+      'Armed and unarmed security officers',
+      'Mobile security patrols',
+      'Civil investigative services',
+      '24/7 dispatch, communication and monitoring',
+      'Security camera systems',
+      'Electronic tracking and reporting',
+      'Threat analysis and customized security plans',
+      'CPR-certified security personnel',
+    ].map((name) => ({
+      '@type': 'Offer',
+      itemOffered: { '@type': 'Service', name },
+    })),
   },
 }
 ---
