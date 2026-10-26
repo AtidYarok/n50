@@ -8,5 +8,9 @@ import { SITE } from './src/config'
 export default defineConfig({
   site: SITE.website,
   trailingSlash: 'never',
-  integrations: [tailwind(), alpinejs(), sitemap()],
+  integrations: [
+    tailwind(),
+    alpinejs(),
+    sitemap({ filter: (page) => !page.endsWith('/test') }),
+  ],
 })

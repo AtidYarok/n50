@@ -1,7 +1,7 @@
 import type { Site, Contact, SocialObjects } from './types'
 
 export const SITE: Site = {
-  website: 'https://national50.com', // replace this with your deployed domain
+  website: 'https://www.national50.com',
   author: 'Atid Yarok',
   description:
     "National 50 Security and Investigations Inc. is a dominant provider of a wide array of security and safety services in each of the markets in which we compete.",

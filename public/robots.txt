@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://national50.com/sitemap-index.xml
+Sitemap: https://www.national50.com/sitemap-index.xml

@@ -12,6 +12,7 @@ interface Props {
   description?: string
   ogImage?: string
   canonicalURL?: string
+  robots?: string
 }
 
 const {
@@ -21,6 +22,7 @@ const {
   ogImage = SITE.ogImage,
   canonicalURL = new URL(Astro.url.pathname.replace(/\/$/, ''), Astro.site)
     .href,
+  robots,
 } = Astro.props
 
 ---
@@ -28,7 +30,7 @@ const {
 <html lang="en" data-theme="bumblebee">
   <head>
     <meta name="generator" content={Astro.generator} />
-    <SEOHead {title} {author} {description} {ogImage} {canonicalURL} />
+    <SEOHead {title} {author} {description} {ogImage} {canonicalURL} {robots} />
 
     <ViewTransitions />
   </head>
