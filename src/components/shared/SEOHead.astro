@@ -1,0 +1,65 @@
+---
+import { CONTACT, SITE } from '@config'
+
+interface Props {
+  title?: string
+  author?: string
+  description?: string
+  ogImage?: string
+  canonicalURL: string
+}
+
+const {
+  title = SITE.title,
+  author = SITE.author,
+  description = SITE.description,
+  ogImage = SITE.ogImage,
+  canonicalURL,
+} = Astro.props
+
+const socialImageURL = new URL(ogImage, SITE.website).href
+const organizationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfessionalService',
+  name: 'National 50 Security and Investigations Inc.',
+  url: SITE.website,
+  logo: new URL('/weblogo.png', SITE.website).href,
+  description: SITE.description,
+  telephone: `+1-${CONTACT.phone.replace(/\./g, '-')}`,
+  email: CONTACT.email,
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: CONTACT.address.street,
+    addressLocality: CONTACT.address.city,
+    addressRegion: CONTACT.address.state,
+    postalCode: CONTACT.address.zip,
+    addressCountry: 'US',
+  },
+}
+---
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="index, follow, max-image-preview:large" />
+<meta name="theme-color" content="#111827" />
+<link rel="canonical" href={canonicalURL} />
+<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+<link rel="sitemap" type="application/xml" href="/sitemap-index.xml" />
+
+<title>{title}</title>
+<meta name="description" content={description} />
+<meta name="author" content={author} />
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content={SITE.title} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:url" content={canonicalURL} />
+<meta property="og:image" content={socialImageURL} />
+<meta property="og:image:alt" content="National 50 Security and Investigations" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={socialImageURL} />
+<script type="application/ld+json" set:html={JSON.stringify(organizationSchema)} />
